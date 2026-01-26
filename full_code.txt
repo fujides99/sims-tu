@@ -1,0 +1,1175 @@
+
+
+--- FILE: ./views/surat/index.php ---
+
+
+<?php
+// views/surat/index.php
+require_once '../../config/session_check.php';
+require_once '../../config/database.php';
+
+// Ambil data surat urut dari yang terbaru
+$stmt = $pdo->query("SELECT * FROM surat_masuk ORDER BY tgl_diterima DESC, id DESC");
+$surat = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Agenda Surat Masuk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="../dashboard/index.php">SIMS TU - Surat</a>
+            <div class="d-flex">
+                <a href="../dashboard/index.php" class="btn btn-outline-light btn-sm me-2">Ke Dashboard</a>
+                <a href="../auth/logout.php" class="btn btn-danger btn-sm">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Buku Agenda Surat Masuk</h5>
+                <a href="tambah.php" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Input Surat Baru</a>
+            </div>
+            <div class="card-body">
+                
+                <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'sukses'): ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Data surat berhasil disimpan!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                <?php endif; ?>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle">
+                        <thead class="table-success">
+                            <tr>
+                                <th>No Agenda</th>
+                                <th>No. Surat</th>
+                                <th>Pengirim</th>
+                                <th>Perihal</th>
+                                <th>Tgl Surat</th>
+                                <th>File</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($surat as $row): ?>
+                            <tr>
+                                <td class="text-center fw-bold"><?= htmlspecialchars($row['no_agenda']) ?></td>
+                                <td><?= htmlspecialchars($row['no_surat']) ?></td>
+                                <td><?= htmlspecialchars($row['pengirim']) ?></td>
+                                <td><?= htmlspecialchars($row['perihal']) ?></td>
+                                <td><?= date('d-m-Y', strtotime($row['tgl_surat'])) ?></td>
+                                <td class="text-center">
+                                    <?php if (!empty($row['file_path'])): ?>
+                                        <a href="../../public/uploads/surat/<?= $row['file_path'] ?>" 
+                                           target="_blank" 
+                                           class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-file-earmark-text"></i> Lihat
+                                        </a>
+                                    <?php else: ?>
+                                        <span class="text-muted">-</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        
+                                        <a href="../../config/app/surat/proses_surat.php?aksi=hapus&id=<?= $row['id'] ?>" 
+                                        class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Yakin ingin menghapus surat dari <?= htmlspecialchars($row['pengirim']) ?>? File scan juga akan dihapus permanen.')">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+
+                            <?php if (count($surat) == 0): ?>
+                                <tr>
+                                    <td colspan="7" class="text-center text-muted">Belum ada data surat masuk.</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+--- FILE: ./views/surat/tambah.php ---
+
+
+<?php require_once '../../config/session_check.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Input Surat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Form Tambah Surat</h5>
+            </div>
+            <div class="card-body">
+                
+                <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'ext_salah'): ?>
+                    <div class="alert alert-danger">Format file harus PDF, JPG, atau PNG!</div>
+                <?php elseif (isset($_GET['pesan']) && $_GET['pesan'] == 'ukuran_besar'): ?>
+                    <div class="alert alert-danger">Ukuran file maksimal 2MB!</div>
+                <?php endif; ?>
+
+                <form action="../../config/app/surat/proses_surat.php?aksi=tambah" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label>Nomor Agenda</label>
+                            <input type="text" name="no_agenda" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Nomor Surat</label>
+                            <input type="text" name="no_surat" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label>Pengirim</label>
+                            <input type="text" name="pengirim" class="form-control" placeholder="Nama Instansi/Orang" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Tanggal Surat</label>
+                            <input type="date" name="tgl_surat" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Tanggal Diterima</label>
+                        <input type="date" name="tgl_diterima" class="form-control" value="<?= date('Y-m-d') ?>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Perihal / Isi Ringkas</label>
+                        <textarea name="perihal" class="form-control" rows="3" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Upload File Scan (PDF/JPG)</label>
+                        <input type="file" name="file_surat" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <a href="index.php" class="btn btn-secondary">Kembali</a>
+                    <button type="submit" class="btn btn-primary">Simpan Surat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+--- FILE: ./views/surat/edit.php ---
+
+
+<?php 
+require_once '../../config/session_check.php';
+require_once '../../config/database.php';
+
+$id = $_GET['id'];
+$stmt = $pdo->prepare("SELECT * FROM surat_masuk WHERE id = ?");
+$stmt->execute([$id]);
+$surat = $stmt->fetch();
+
+if(!$surat) die("Surat tidak ditemukan!");
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Edit Surat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-warning">
+                <h5 class="mb-0">Edit Surat Masuk</h5>
+            </div>
+            <div class="card-body">
+                
+                <form action="../../config/app/surat/proses_surat.php?aksi=edit" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?= $surat['id'] ?>">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label>Nomor Agenda</label>
+                            <input type="text" name="no_agenda" class="form-control" value="<?= $surat['no_agenda'] ?>" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Nomor Surat</label>
+                            <input type="text" name="no_surat" class="form-control" value="<?= $surat['no_surat'] ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label>Pengirim</label>
+                            <input type="text" name="pengirim" class="form-control" value="<?= $surat['pengirim'] ?>" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Tanggal Surat</label>
+                            <input type="date" name="tgl_surat" class="form-control" value="<?= $surat['tgl_surat'] ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Tanggal Diterima</label>
+                        <input type="date" name="tgl_diterima" class="form-control" value="<?= $surat['tgl_diterima'] ?>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Perihal</label>
+                        <textarea name="perihal" class="form-control" rows="3" required><?= $surat['perihal'] ?></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>File Scan Saat Ini</label><br>
+                        <?php if($surat['file_path']): ?>
+                            <a href="../../public/uploads/surat/<?= $surat['file_path'] ?>" target="_blank" class="badge bg-primary text-decoration-none">
+                                Lihat File Lama
+                            </a>
+                        <?php else: ?>
+                            <span class="badge bg-secondary">Tidak ada file</span>
+                        <?php endif; ?>
+                        
+                        <div class="mt-2">
+                            <label class="small text-muted">Ganti File (Biarkan kosong jika tidak ingin mengubah file)</label>
+                            <input type="file" name="file_surat" class="form-control" accept=".pdf,.jpg,.png">
+                        </div>
+                    </div>
+
+                    <a href="index.php" class="btn btn-secondary">Batal</a>
+                    <button type="submit" class="btn btn-warning">Update Surat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+--- FILE: ./views/auth/logout.php ---
+
+
+<?php
+// views/auth/logout.php
+session_start();
+session_unset();
+session_destroy();
+
+// PERBAIKAN: Gunakan /sims-tu/ di depan agar browser tidak bingung
+header("Location: /sims-tu/views/auth/login.php?pesan=logout");
+exit();
+?>
+
+
+--- FILE: ./views/auth/login.php ---
+
+
+<?php
+// views/auth/login.php
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: ../dashboard/index.php");
+    exit();
+}
+
+// --- PERBAIKAN PATH SESUAI GAMBAR ---
+// Posisi kita: views/auth/
+// Target: config/database.php
+// Naik 2 level (../../) lalu masuk ke 'config/database.php'
+$path_config = __DIR__ . '/../../config/database.php';
+
+if (file_exists($path_config)) {
+    require_once $path_config;
+} else {
+    die("ERROR: File koneksi tidak ditemukan di: $path_config");
+}
+
+$error = "";
+// ... (Sisa kode ke bawah sama persis dengan sebelumnya)
+// 3. Proses Login Saat Tombol ditekan
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+
+    if (empty($username) || empty($password)) {
+        $error = "Username dan Password wajib diisi!";
+    } else {
+        try {
+            // Cek User ke Database
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :u LIMIT 1");
+            $stmt->execute(['u' => $username]);
+            $user = $stmt->fetch();
+
+            if ($user && password_verify($password, $user['password'])) {
+                
+                // Cek Status Aktif
+                if ($user['status'] != 'aktif') {
+                    $error = "Akun Anda dinonaktifkan. Hubungi Admin.";
+                } else {
+                    // Login Sukses -> Set Session
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['nama_lengkap'] = $user['nama_lengkap'];
+                    $_SESSION['role'] = $user['role'];
+
+                    // Redirect ke Dashboard
+                    header("Location: ../dashboard/index.php");
+                    exit();
+                }
+
+            } else {
+                $error = "Username atau Password salah!";
+            }
+
+        } catch (PDOException $e) {
+            $error = "Error Database: " . $e->getMessage();
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SIMS TU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f2f5; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .login-box { width: 100%; max-width: 400px; padding: 30px; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h3 class="text-center mb-4 text-primary">Login TU SMP</h3>
+
+        <?php if (!empty($error)): ?>
+            <div class="alert alert-danger"><?= $error ?></div>
+        <?php endif; ?>
+
+        <?php 
+        // Pesan dari session check
+        if (isset($_GET['pesan']) && $_GET['pesan'] == 'belum_login') {
+            echo '<div class="alert alert-warning">Silakan login dulu!</div>';
+        }
+        if (isset($_GET['pesan']) && $_GET['pesan'] == 'logout') {
+            echo '<div class="alert alert-success">Berhasil Logout.</div>';
+        }
+        ?>
+
+        <form action="" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required autofocus>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Masuk Aplikasi</button>
+            </div>
+        </form>
+        
+        <div class="text-center mt-3 text-muted">
+            <small>Default: admin / admin123</small>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+--- FILE: ./views/siswa/index.php ---
+
+
+<?php
+require_once '../../config/session_check.php';
+require_once '../../config/database.php';
+
+// Ambil data siswa
+$stmt = $pdo->query("SELECT * FROM siswa ORDER BY kelas_sekarang ASC, nama_lengkap ASC");
+$siswa = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Data Siswa - SIMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="../dashboard/index.php">SIMS SMP</a>
+            <a href="../auth/logout.php" class="btn btn-danger btn-sm">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Data Siswa</h5>
+                <a href="tambah.php" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Tambah Siswa</a>
+            </div>
+            <div class="card-body">
+                
+                <?php if (isset($_GET['pesan'])): ?>
+                    <?php if ($_GET['pesan'] == 'sukses_tambah'): ?>
+                        <div class="alert alert-success">Data berhasil ditambahkan!</div>
+                    <?php elseif ($_GET['pesan'] == 'sukses_edit'): ?>
+                        <div class="alert alert-info">Data berhasil diperbarui!</div>
+                    <?php elseif ($_GET['pesan'] == 'sukses_hapus'): ?>
+                        <div class="alert alert-warning">Data berhasil dihapus!</div>
+                    <?php endif; ?>
+                <?php endif; ?>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>No</th>
+                                <th>NIS</th>
+                                <th>NISN</th>
+                                <th>Nama Lengkap</th>
+                                <th>L/P</th>
+                                <th>Kelas</th>
+                                <th width="150">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1; foreach ($siswa as $row): ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= htmlspecialchars($row['nis']) ?></td>
+                                <td><?= htmlspecialchars($row['nisn']) ?></td>
+                                <td><?= htmlspecialchars($row['nama_lengkap']) ?></td>
+                                <td><?= $row['jk'] ?></td>
+                                <td><span class="badge bg-secondary"><?= htmlspecialchars($row['kelas_sekarang']) ?></span></td>
+                                <td>
+                                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning text-white">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a href="../../config/app/siswa/proses_siswa.php?aksi=hapus&id=<?= $row['id'] ?>" ...
+                                       class="btn btn-sm btn-danger"
+                                       onclick="return confirm('Yakin ingin menghapus data <?= $row['nama_lengkap'] ?>?');">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+--- FILE: ./views/siswa/tambah.php ---
+
+
+<?php require_once '../../config/session_check.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Tambah Siswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Form Tambah Siswa</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'nisn_duplicate'): ?>
+                            <div class="alert alert-danger">GAGAL: NISN sudah terdaftar di sistem!</div>
+                        <?php endif; ?>
+
+                        <form action="../../config/app/siswa/proses_siswa.php?aksi=tambah" method="POST">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label>NIS</label>
+                                    <input type="text" name="nis" class="form-control" required>
+                                </div>
+                                <div class="col">
+                                    <label>NISN <span class="text-danger">*</span></label>
+                                    <input type="text" name="nisn" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Nama Lengkap</label>
+                                <input type="text" name="nama_lengkap" class="form-control" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label>Jenis Kelamin</label>
+                                    <select name="jk" class="form-select" required>
+                                        <option value="">-- Pilih --</option>
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label>Kelas</label>
+                                    <input type="text" name="kelas_sekarang" class="form-control" placeholder="Contoh: 7A" required>
+                                </div>
+                                <div class="col">
+                                    <label>Tahun Masuk</label>
+                                    <input type="number" name="tahun_masuk" class="form-control" value="<?= date('Y') ?>" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Tanggal Lahir</label>
+                                <input type="date" name="tgl_lahir" class="form-control" required>
+                            </div>
+                            
+                            <a href="index.php" class="btn btn-secondary">Kembali</a>
+                            <button type="submit" class="btn btn-primary">Simpan Data</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+--- FILE: ./views/siswa/edit.php ---
+
+
+<?php 
+require_once '../../config/session_check.php'; 
+require_once '../../config/database.php';
+
+// Ambil ID dari URL
+$id = $_GET['id'];
+$stmt = $pdo->prepare("SELECT * FROM siswa WHERE id = ?");
+$stmt->execute([$id]);
+$data = $stmt->fetch();
+
+if (!$data) {
+    echo "Data tidak ditemukan!";
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Edit Siswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning">
+                        <h5 class="mb-0">Form Edit Siswa</h5>
+                    </div>
+                    <div class="card-body">
+
+                         <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'nisn_duplicate'): ?>
+                            <div class="alert alert-danger">GAGAL: NISN milik siswa lain!</div>
+                        <?php endif; ?>
+
+                        <form action="../../config/app/siswa/proses_siswa.php?aksi=edit" method="POST">
+                            <input type="hidden" name="id" value="<?= $data['id'] ?>">
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label>NIS</label>
+                                    <input type="text" name="nis" class="form-control" value="<?= $data['nis'] ?>" required>
+                                </div>
+                                <div class="col">
+                                    <label>NISN</label>
+                                    <input type="text" name="nisn" class="form-control" value="<?= $data['nisn'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Nama Lengkap</label>
+                                <input type="text" name="nama_lengkap" class="form-control" value="<?= $data['nama_lengkap'] ?>" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label>Jenis Kelamin</label>
+                                    <select name="jk" class="form-select" required>
+                                        <option value="L" <?= ($data['jk'] == 'L') ? 'selected' : '' ?>>Laki-laki</option>
+                                        <option value="P" <?= ($data['jk'] == 'P') ? 'selected' : '' ?>>Perempuan</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label>Kelas</label>
+                                    <input type="text" name="kelas_sekarang" class="form-control" value="<?= $data['kelas_sekarang'] ?>" required>
+                                </div>
+                                <div class="col">
+                                    <label>Tahun Masuk</label>
+                                    <input type="number" name="tahun_masuk" class="form-control" value="<?= $data['tahun_masuk'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Tanggal Lahir</label>
+                                <input type="date" name="tgl_lahir" class="form-control" value="<?= $data['tgl_lahir'] ?>" required>
+                            </div>
+                            
+                            <a href="index.php" class="btn btn-secondary">Kembali</a>
+                            <button type="submit" class="btn btn-warning">Update Data</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+--- FILE: ./views/layouts/footer.php ---
+
+
+</div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+--- FILE: ./views/layouts/sidebar.php ---
+
+
+<?php
+// Logika sederhana untuk menentukan menu aktif
+// Mengambil URL saat ini, misal: /sims-tu/views/siswa/index.php
+$uri = $_SERVER['REQUEST_URI'];
+?>
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; min-height: 100vh;">
+    <a href="/sims-tu/views/dashboard/index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <i class="bi bi-building fs-4 me-2"></i>
+        <span class="fs-4 fw-bold">SIMS SMP</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        
+        <li class="nav-item">
+            <a href="/sims-tu/views/dashboard/index.php" 
+               class="nav-link text-white <?= (strpos($uri, 'dashboard') !== false) ? 'active bg-primary' : '' ?>" aria-current="page">
+                <i class="bi bi-speedometer2 me-2"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="/sims-tu/views/siswa/index.php" 
+               class="nav-link text-white <?= (strpos($uri, 'siswa') !== false) ? 'active bg-primary' : '' ?>">
+                <i class="bi bi-people-fill me-2"></i>
+                Data Siswa
+            </a>
+        </li>
+
+        <li>
+            <a href="/sims-tu/views/surat/index.php" 
+               class="nav-link text-white <?= (strpos($uri, 'surat') !== false) ? 'active bg-primary' : '' ?>">
+                <i class="bi bi-envelope-paper-fill me-2"></i>
+                Surat Masuk
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link text-white text-muted">
+                <i class="bi bi-person-badge-fill me-2"></i>
+                Data Guru (Soon)
+            </a>
+        </li>
+    </ul>
+    
+    <hr>
+    
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin+TU&background=random" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong><?= $_SESSION['nama_lengkap'] ?? 'Admin' ?></strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="/sims-tu/views/auth/logout.php">Sign out</a></li>
+        </ul>
+    </div>
+</div>
+
+
+--- FILE: ./views/layouts/header.php ---
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Tata Usaha</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* CSS Tambahan agar layout rapi */
+        body {
+            overflow-x: hidden; /* Hilangkan scroll horizontal */
+        }
+        .main-content {
+            width: 100%;
+            background-color: #f8f9fa; /* Warna background abu muda */
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="d-flex">
+        
+        <?php include __DIR__ . '/sidebar.php'; ?>
+
+        <div class="main-content p-4">
+
+
+--- FILE: ./views/dashboard/index.php ---
+
+
+<?php
+// views/dashboard/index.php
+require_once '../../config/session_check.php';
+
+// 1. Panggil Header (Otomatis panggil Sidebar juga)
+require_once '../layouts/header.php';
+?>
+
+<div class="container-fluid">
+    <h2 class="mb-4">Dashboard Overview</h2>
+
+    <div class="alert alert-success shadow-sm">
+        <h4 class="alert-heading">Selamat Datang, <?= $_SESSION['nama_lengkap']; ?>!</h4>
+        <p>Anda login sebagai <strong><?= ucfirst($_SESSION['role']); ?></strong>. Selamat bekerja mengelola administrasi sekolah.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title"><i class="bi bi-people-fill"></i> Manajemen Siswa</h5>
+                        <p class="card-text opacity-75">Kelola data induk siswa, edit, dan cetak laporan.</p>
+                    </div>
+                    <a href="../siswa/index.php" class="btn btn-light text-primary fw-bold mt-3 stretched-link">Buka Menu Siswa</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-white bg-success h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title"><i class="bi bi-envelope-paper-fill"></i> Surat Masuk</h5>
+                        <p class="card-text opacity-75">Input surat masuk, scan file, dan agenda surat.</p>
+                    </div>
+                    <a href="../surat/index.php" class="btn btn-light text-success fw-bold mt-3 stretched-link">Buka Menu Surat</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-white h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-secondary"><i class="bi bi-gear-fill"></i> Pengaturan</h5>
+                        <p class="card-text text-muted">Profil pengguna dan sistem.</p>
+                    </div>
+                    <a href="../auth/logout.php" class="btn btn-outline-danger w-100 mt-3">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+// 2. Panggil Footer (Tutup HTML)
+require_once '../layouts/footer.php';
+?>
+
+
+--- FILE: ./config/session_check.php ---
+
+
+<?php
+// config/session_check.php
+
+// 1. Pastikan session dimulai
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// 2. Cek apakah ada data user_id di session
+if (!isset($_SESSION['user_id'])) {
+    // KEAMANAN: Gunakan path absolut agar tidak error "views/views"
+    // Pastikan folder proyek Anda namanya 'sims-tu' sesuai URL yang Anda kirim
+    header("Location: /sims-tu/views/auth/login.php?pesan=belum_login");
+    exit();
+}
+?>
+
+
+--- FILE: ./config/app/surat/proses_surat.php ---
+
+
+<?php
+// config/app/surat/proses_surat.php
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+session_start();
+
+// Path ke database (Naik 2 langkah)
+require_once '../../database.php';
+
+// Folder Upload (Absolute Path)
+$folder_upload = __DIR__ . '/../../../public/uploads/surat/';
+
+$aksi = $_GET['aksi'] ?? '';
+
+try {
+    // --- 1. PROSES TAMBAH ---
+    if ($aksi == 'tambah' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+        // ... (Logika Tambah sama seperti sebelumnya, saya ringkas di sini) ...
+        $nama_file_db = null;
+        
+        if (!empty($_FILES['file_surat']['name'])) {
+            // Cek folder
+            if (!is_dir($folder_upload)) mkdir($folder_upload, 0777, true);
+
+            $ext = strtolower(pathinfo($_FILES['file_surat']['name'], PATHINFO_EXTENSION));
+            // Validasi ext & size disini (anggap sudah valid seperti kode sebelumnya)
+            
+            $nama_file_baru = uniqid() . '_surat.' . $ext;
+            if(move_uploaded_file($_FILES['file_surat']['tmp_name'], $folder_upload . $nama_file_baru)){
+                $nama_file_db = $nama_file_baru;
+            }
+        }
+
+        $sql = "INSERT INTO surat_masuk (no_agenda, no_surat, pengirim, perihal, tgl_surat, tgl_diterima, file_path, input_by) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $_POST['no_agenda'], $_POST['no_surat'], $_POST['pengirim'], $_POST['perihal'], 
+            $_POST['tgl_surat'], $_POST['tgl_diterima'], $nama_file_db, $_SESSION['user_id']
+        ]);
+
+        header("Location: ../../../views/surat/index.php?pesan=sukses");
+    }
+
+    // --- 2. PROSES EDIT (UPDATE) ---
+    elseif ($aksi == 'edit' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+        $id = $_POST['id'];
+        
+        // Ambil data lama untuk cek file lama
+        $stmt = $pdo->prepare("SELECT file_path FROM surat_masuk WHERE id = ?");
+        $stmt->execute([$id]);
+        $data_lama = $stmt->fetch();
+
+        $nama_file_db = $data_lama['file_path']; // Default pakai file lama
+
+        // Jika ada upload file baru
+        if (!empty($_FILES['file_surat']['name'])) {
+            // 1. Hapus file lama fisik jika ada
+            if ($data_lama['file_path'] && file_exists($folder_upload . $data_lama['file_path'])) {
+                unlink($folder_upload . $data_lama['file_path']);
+            }
+
+            // 2. Upload file baru
+            $ext = strtolower(pathinfo($_FILES['file_surat']['name'], PATHINFO_EXTENSION));
+            $nama_file_baru = uniqid() . '_surat.' . $ext;
+            if(move_uploaded_file($_FILES['file_surat']['tmp_name'], $folder_upload . $nama_file_baru)){
+                $nama_file_db = $nama_file_baru;
+            }
+        }
+
+        // Update Database
+        $sql = "UPDATE surat_masuk SET no_agenda=?, no_surat=?, pengirim=?, perihal=?, tgl_surat=?, tgl_diterima=?, file_path=? WHERE id=?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $_POST['no_agenda'], $_POST['no_surat'], $_POST['pengirim'], $_POST['perihal'], 
+            $_POST['tgl_surat'], $_POST['tgl_diterima'], $nama_file_db, $id
+        ]);
+
+        header("Location: ../../../views/surat/index.php?pesan=sukses_edit");
+    }
+
+    // --- 3. PROSES HAPUS (DELETE) ---
+    elseif ($aksi == 'hapus') {
+        $id = $_GET['id'];
+
+        // Ambil nama file dulu sebelum dihapus datanya
+        $stmt = $pdo->prepare("SELECT file_path FROM surat_masuk WHERE id = ?");
+        $stmt->execute([$id]);
+        $data = $stmt->fetch();
+
+        // Hapus file fisik jika ada
+        if ($data['file_path'] && file_exists($folder_upload . $data['file_path'])) {
+            unlink($folder_upload . $data['file_path']);
+        }
+
+        // Hapus data di database
+        $stmt = $pdo->prepare("DELETE FROM surat_masuk WHERE id = ?");
+        $stmt->execute([$id]);
+
+        header("Location: ../../../views/surat/index.php?pesan=sukses_hapus");
+    }
+
+} catch (PDOException $e) {
+    die("Error Database: " . $e->getMessage());
+}
+?>
+
+
+--- FILE: ./config/app/siswa/proses_siswa.php ---
+
+
+<?php
+// config/app/siswa/proses_siswa.php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
+
+$path_db = __DIR__ . '/../../database.php';
+if (!file_exists($path_db)) {
+    die("FATAL ERROR: File database tidak ditemukan.");
+}
+require_once $path_db;
+
+if (!isset($pdo)) {
+    die("FATAL ERROR: Koneksi database gagal (\$pdo not found).");
+}
+
+$aksi = $_GET['aksi'] ?? '';
+
+try {
+    // --- FUNGSI TAMBAH ---
+    if ($aksi == 'tambah' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+        $nis = trim($_POST['nis'] ?? '');
+        $nisn = trim($_POST['nisn'] ?? '');
+        $nama = trim($_POST['nama_lengkap'] ?? '');
+        $jk = $_POST['jk'] ?? '';
+        $kelas = $_POST['kelas_sekarang'] ?? '';
+        // 1. TANGKAP DATA TAHUN MASUK
+        $tahun_masuk = $_POST['tahun_masuk'] ?? date('Y'); 
+        $tgl_lahir = $_POST['tgl_lahir'] ?? '';
+
+        if(empty($nisn) || empty($nama)) {
+            die("Error: NISN dan Nama tidak boleh kosong.");
+        }
+
+        $check = $pdo->prepare("SELECT id FROM siswa WHERE nisn = ?");
+        $check->execute([$nisn]);
+        
+        if ($check->rowCount() > 0) {
+            header("Location: ../../../views/siswa/tambah.php?pesan=nisn_duplicate");
+            exit();
+        }
+
+        // 2. UPDATE QUERY INSERT (Tambahkan kolom tahun_masuk)
+        $sql = "INSERT INTO siswa (nis, nisn, nama_lengkap, jk, kelas_sekarang, tahun_masuk, tgl_lahir) 
+                VALUES (:nis, :nisn, :nama, :jk, :kelas, :tahun_masuk, :tgl_lahir)";
+        
+        $stmt = $pdo->prepare($sql);
+        
+        // 3. UPDATE EKSEKUSI
+        $simpan = $stmt->execute([
+            'nis' => $nis,
+            'nisn' => $nisn,
+            'nama' => $nama,
+            'jk' => $jk,
+            'kelas' => $kelas,
+            'tahun_masuk' => $tahun_masuk, // Masukkan ke array
+            'tgl_lahir' => $tgl_lahir
+        ]);
+
+        if ($simpan) {
+            header("Location: ../../../views/siswa/index.php?pesan=sukses_tambah");
+            exit();
+        } else {
+            $errorInfo = $stmt->errorInfo();
+            die("GAGAL SIMPAN SQL: " . $errorInfo[2]);
+        }
+    }
+
+    // --- FUNGSI EDIT ---
+    elseif ($aksi == 'edit' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+        $id = $_POST['id'];
+        $nis = trim($_POST['nis']);
+        $nisn = trim($_POST['nisn']);
+        $nama = trim($_POST['nama_lengkap']);
+        $jk = $_POST['jk'];
+        $kelas = $_POST['kelas_sekarang'];
+        // 1. TANGKAP DATA TAHUN MASUK
+        $tahun_masuk = $_POST['tahun_masuk'];
+        $tgl_lahir = $_POST['tgl_lahir'];
+
+        $check = $pdo->prepare("SELECT id FROM siswa WHERE nisn = ? AND id != ?");
+        $check->execute([$nisn, $id]);
+
+        if ($check->rowCount() > 0) {
+            header("Location: ../../../views/siswa/edit.php?id=$id&pesan=nisn_duplicate");
+            exit();
+        }
+
+        // 2. UPDATE QUERY UPDATE
+        $sql = "UPDATE siswa SET nis=?, nisn=?, nama_lengkap=?, jk=?, kelas_sekarang=?, tahun_masuk=?, tgl_lahir=? WHERE id=?";
+        $stmt = $pdo->prepare($sql);
+        
+        // 3. UPDATE EKSEKUSI
+        $update = $stmt->execute([$nis, $nisn, $nama, $jk, $kelas, $tahun_masuk, $tgl_lahir, $id]);
+
+        if ($update) {
+            header("Location: ../../../views/siswa/index.php?pesan=sukses_edit");
+        } else {
+            $errorInfo = $stmt->errorInfo();
+            die("GAGAL UPDATE SQL: " . $errorInfo[2]);
+        }
+    }
+
+    // --- FUNGSI HAPUS ---
+    elseif ($aksi == 'hapus') {
+        $id = $_GET['id'];
+        $sql = "DELETE FROM siswa WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        $hapus = $stmt->execute([$id]);
+
+        if ($hapus) {
+            header("Location: ../../../views/siswa/index.php?pesan=sukses_hapus");
+        } else {
+            $errorInfo = $stmt->errorInfo();
+            die("GAGAL HAPUS SQL: " . $errorInfo[2]);
+        }
+    }
+
+} catch (PDOException $e) {
+    die("<h1>ERROR DATABASE FATAL:</h1> " . $e->getMessage());
+} catch (Exception $e) {
+    die("<h1>ERROR SYSTEM:</h1> " . $e->getMessage());
+}
+?>
+
+
+--- FILE: ./config/database.php ---
+
+
+<?php
+// config/database.php
+
+$host = 'localhost';
+$dbname = 'db_tu_smp';
+$username = 'admin';      // Sesuaikan dengan user database lokal Anda
+$password = 'smpn1c';          // Sesuaikan dengan password database lokal Anda
+
+try {
+    // Membuat koneksi PDO
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    
+    // Konfigurasi Error Mode ke Exception (Penting untuk debugging)
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Default fetch mode ke Associative Array (agar hasil query jadi array ['nama' => 'Budi'])
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    
+    // Non-aktifkan emulasi prepared statements (Security: Mencegah celah injeksi tingkat lanjut)
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
+} catch (PDOException $e) {
+    // Jika gagal, stop aplikasi dan tampilkan pesan error sederhana
+    die("Koneksi Database Gagal: " . $e->getMessage());
+}
+?>
+
+
+--- FILE: ./setup_admin.php ---
+
+
+<?php
+// setup_admin.php
+
+// Panggil database sesuai struktur di gambar (folder config)
+$path_db = 'config/database.php';
+
+if (!file_exists($path_db)) {
+    die("File database tidak ketemu. Pastikan file ini ada di folder root (luar), sejajar dengan folder config.");
+}
+
+require_once $path_db;
+
+// Kita akan reset user 'admin'
+$username = 'admin';
+$password_baru = 'admin123'; 
+// ENKRIPSI PASSWORD (Wajib!)
+$password_hash = password_hash($password_baru, PASSWORD_DEFAULT);
+
+try {
+    // Hapus user admin lama (biar bersih)
+    $pdo->exec("DELETE FROM users WHERE username = 'admin'");
+
+    // Buat user admin baru yang passwordnya sudah di-hash
+    $sql = "INSERT INTO users (username, password, nama_lengkap, role, status) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$username, $password_hash, 'Administrator Utama', 'admin', 'aktif']);
+
+    echo "<h1>SUKSES!</h1>";
+    echo "Akun Admin berhasil di-reset.<br>";
+    echo "Username: <b>admin</b><br>";
+    echo "Password: <b>admin123</b><br><br>";
+    echo "Silakan <a href='views/auth/login.php'>LOGIN DISINI</a>";
+
+} catch (PDOException $e) {
+    die("Error Database: " . $e->getMessage());
+}
+?>
