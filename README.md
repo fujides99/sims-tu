@@ -104,7 +104,3 @@ Buka browser dan akses `http://localhost/sims-tu`
 Dikembangkan dengan ❤️ oleh **Fujides99**
 
 ```
-
-**Apakah ada bagian deskripsi atau fitur lain yang ingin Anda tambahkan ke dalam README ini?**
-
-```
