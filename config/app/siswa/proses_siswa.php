@@ -4,72 +4,107 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
-$path_db = __DIR__ . '/../../database.php';
-if (!file_exists($path_db)) die("FATAL ERROR: File database tidak ditemukan.");
-require_once $path_db;
+require_once '../../database.php';
 
 $aksi = $_GET['aksi'] ?? '';
 
 try {
-    // --- TAMBAH ---
+    // --- 1. TAMBAH DATA ---
     if ($aksi == 'tambah' && $_SERVER['REQUEST_METHOD'] == 'POST') {
-        $nis = trim($_POST['nis']);
-        $nisn = trim($_POST['nisn']);
-        $nama = trim($_POST['nama_lengkap']);
-        $jk = $_POST['jk'];
-        $agama = $_POST['agama']; // BARU
-        $kelas = $_POST['kelas_sekarang'];
-        $tahun_masuk = $_POST['tahun_masuk'];
-        $tgl_lahir = $_POST['tgl_lahir'];
-
+        
         // Cek NISN Ganda
         $check = $pdo->prepare("SELECT id FROM siswa WHERE nisn = ?");
-        $check->execute([$nisn]);
+        $check->execute([$_POST['nisn']]);
         if ($check->rowCount() > 0) {
             header("Location: ../../../views/siswa/tambah.php?pesan=nisn_duplicate");
             exit();
         }
 
-        $sql = "INSERT INTO siswa (nis, nisn, nama_lengkap, jk, agama, kelas_sekarang, tahun_masuk, tgl_lahir) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO siswa (
+            nis, nisn, nama_lengkap, jk, tempat_lahir, tgl_lahir, agama, 
+            alamat_siswa, nama_ayah, nama_ibu, pekerjaan_ayah, pekerjaan_ibu, 
+            no_hp_ortu, kelas_sekarang, tahun_masuk, status_siswa
+        ) VALUES (
+            ?, ?, ?, ?, ?, ?, ?, 
+            ?, ?, ?, ?, ?, 
+            ?, ?, ?, 'Aktif'
+        )";
+        
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$nis, $nisn, $nama, $jk, $agama, $kelas, $tahun_masuk, $tgl_lahir]);
+        $stmt->execute([
+            $_POST['nis'], $_POST['nisn'], $_POST['nama_lengkap'], $_POST['jk'],
+            $_POST['tempat_lahir'], $_POST['tgl_lahir'], $_POST['agama'],
+            $_POST['alamat_siswa'], $_POST['nama_ayah'], $_POST['nama_ibu'],
+            $_POST['pekerjaan_ayah'], $_POST['pekerjaan_ibu'], $_POST['no_hp_ortu'],
+            $_POST['kelas_sekarang'], $_POST['tahun_masuk']
+        ]);
 
         header("Location: ../../../views/siswa/index.php?pesan=sukses_tambah");
     }
 
-    // --- EDIT ---
+    // --- 2. EDIT DATA ---
     elseif ($aksi == 'edit' && $_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_POST['id'];
-        $nis = trim($_POST['nis']);
-        $nisn = trim($_POST['nisn']);
-        $nama = trim($_POST['nama_lengkap']);
-        $jk = $_POST['jk'];
-        $agama = $_POST['agama']; // BARU
-        $kelas = $_POST['kelas_sekarang'];
-        $tahun_masuk = $_POST['tahun_masuk'];
-        $tgl_lahir = $_POST['tgl_lahir'];
 
+        // Cek NISN Ganda (kecuali punya sendiri)
         $check = $pdo->prepare("SELECT id FROM siswa WHERE nisn = ? AND id != ?");
-        $check->execute([$nisn, $id]);
+        $check->execute([$_POST['nisn'], $id]);
         if ($check->rowCount() > 0) {
             header("Location: ../../../views/siswa/edit.php?id=$id&pesan=nisn_duplicate");
             exit();
         }
 
-        $sql = "UPDATE siswa SET nis=?, nisn=?, nama_lengkap=?, jk=?, agama=?, kelas_sekarang=?, tahun_masuk=?, tgl_lahir=? WHERE id=?";
+        $sql = "UPDATE siswa SET 
+            nis=?, nisn=?, nama_lengkap=?, jk=?, tempat_lahir=?, tgl_lahir=?, agama=?, 
+            alamat_siswa=?, nama_ayah=?, nama_ibu=?, pekerjaan_ayah=?, pekerjaan_ibu=?, 
+            no_hp_ortu=?, kelas_sekarang=?, tahun_masuk=?, status_siswa=?
+            WHERE id=?";
+        
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$nis, $nisn, $nama, $jk, $agama, $kelas, $tahun_masuk, $tgl_lahir, $id]);
+        $stmt->execute([
+            $_POST['nis'], $_POST['nisn'], $_POST['nama_lengkap'], $_POST['jk'],
+            $_POST['tempat_lahir'], $_POST['tgl_lahir'], $_POST['agama'],
+            $_POST['alamat_siswa'], $_POST['nama_ayah'], $_POST['nama_ibu'],
+            $_POST['pekerjaan_ayah'], $_POST['pekerjaan_ibu'], $_POST['no_hp_ortu'],
+            $_POST['kelas_sekarang'], $_POST['tahun_masuk'], $_POST['status_siswa'],
+            $id
+        ]);
 
         header("Location: ../../../views/siswa/index.php?pesan=sukses_edit");
     }
 
-    // --- HAPUS ---
+    // --- 3. HAPUS DATA SATUAN ---
     elseif ($aksi == 'hapus') {
-        $id = $_GET['id'];
         $stmt = $pdo->prepare("DELETE FROM siswa WHERE id = ?");
-        $stmt->execute([$id]);
+        $stmt->execute([$_GET['id']]);
         header("Location: ../../../views/siswa/index.php?pesan=sukses_hapus");
+    }
+
+    // --- 4. HAPUS SEMUA (RESET DATABASE) ---
+    elseif ($aksi == 'hapus_semua' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+        $pass_input = $_POST['password_konfirmasi'];
+        $user_id = $_SESSION['user_id']; // Ambil ID admin yang sedang login
+
+        // Ambil Password Hash Admin dari Database
+        $stmt = $pdo->prepare("SELECT password FROM users WHERE id = ?");
+        $stmt->execute([$user_id]);
+        $user = $stmt->fetch();
+
+        // Verifikasi Password
+        if ($user && password_verify($pass_input, $user['password'])) {
+            
+            // Password Benar: Hapus Semua Data
+            $stmt = $pdo->query("DELETE FROM siswa"); 
+            
+            // Reset Auto Increment agar ID mulai dari 1 lagi
+            $pdo->query("ALTER TABLE siswa AUTO_INCREMENT = 1");
+
+            header("Location: ../../../views/siswa/index.php?pesan=sukses_reset");
+        } else {
+            // Password Salah
+            header("Location: ../../../views/siswa/index.php?pesan=gagal_password");
+        }
     }
 
 } catch (PDOException $e) {

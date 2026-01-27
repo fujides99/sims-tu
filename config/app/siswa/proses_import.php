@@ -7,7 +7,6 @@ require_once '../../database.php';
 
 if (isset($_POST['import'])) {
     
-    // Validasi File
     $fileName = $_FILES['file_csv']['name'];
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
 
@@ -16,48 +15,79 @@ if (isset($_POST['import'])) {
         exit();
     }
 
-    // Buka file CSV
     $handle = fopen($_FILES['file_csv']['tmp_name'], "r");
-    
-    // Lewati baris pertama (Header Judul Kolom)
-    fgetcsv($handle);
+    $firstLine = fgets($handle);
+    $separator = (strpos($firstLine, ';') !== false) ? ';' : ',';
+    rewind($handle);
+    fgetcsv($handle, 1000, $separator); // Lewati Header
 
     try {
-        $pdo->beginTransaction(); // Mulai Transaksi
+        $pdo->beginTransaction();
 
-        $sql = "INSERT INTO siswa (nis, nisn, nama_lengkap, jk, agama, kelas_sekarang, tahun_masuk, tgl_lahir) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO siswa (
+            nis, nisn, nama_lengkap, jk, tempat_lahir, tgl_lahir, agama, 
+            alamat_siswa, nama_ayah, nama_ibu, pekerjaan_ayah, pekerjaan_ibu, 
+            no_hp_ortu, kelas_sekarang, tahun_masuk, status_siswa
+        ) VALUES (
+            ?, ?, ?, ?, ?, ?, ?, 
+            ?, ?, ?, ?, ?, 
+            ?, ?, ?, 'Aktif'
+        )";
+        
         $stmt = $pdo->prepare($sql);
 
-        // Loop baris per baris
-        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-            // Urutan Kolom CSV: 0.NIS, 1.NISN, 2.Nama, 3.JK, 4.Agama, 5.Kelas, 6.Thn, 7.TglLahir
+        // LOGIKA TAHUN MASUK (Semester Genap -> Mundur 1 Tahun)
+        $bulan_ini = date('n'); 
+        $tahun_ini = date('Y'); 
+        $tahun_awal_tp = ($bulan_ini < 7) ? $tahun_ini - 1 : $tahun_ini;
+
+        while (($row = fgetcsv($handle, 1000, $separator)) !== FALSE) {
             
-            // Cek Duplicate NISN
+            // Minimal 14 kolom agar aman (boleh kosong tapi kolomnya ada)
+            if (count($row) < 14) continue; 
+            if (empty($row[1])) continue; // NISN wajib ada
+
+            // Mapping Data
+            $nis = trim($row[0]);
+            $nisn = trim($row[1]);
+            $nama = trim($row[2]);
+            $jk = trim($row[3]);
+            $tempat = trim($row[4]);
+            $tgl_lahir = trim($row[5]);
+            $agama = trim($row[6]);
+            $alamat = trim($row[7]);
+            $ayah = trim($row[8]);
+            $ibu = trim($row[9]);
+            $p_ayah = trim($row[10]);
+            $p_ibu = trim($row[11]);
+            $hp = trim($row[12]);
+            $kelas_raw = trim($row[13]);
+
+            // Hitung Tahun Masuk
+            $kelas_angka = (int) filter_var($kelas_raw, FILTER_SANITIZE_NUMBER_INT);
+            if ($kelas_angka < 7 || $kelas_angka > 9) $kelas_angka = 7;
+            $tahun_masuk = $tahun_awal_tp - ($kelas_angka - 7);
+
+            // Cek Duplicate
             $cek = $pdo->prepare("SELECT id FROM siswa WHERE nisn = ?");
-            $cek->execute([$row[1]]);
+            $cek->execute([$nisn]);
             
             if ($cek->rowCount() == 0) {
                 $stmt->execute([
-                    $row[0], // NIS
-                    $row[1], // NISN
-                    $row[2], // Nama
-                    $row[3], // JK (L/P)
-                    $row[4], // Agama
-                    $row[5], // Kelas
-                    $row[6], // Thn Masuk
-                    $row[7]  // Tgl Lahir
+                    $nis, $nisn, $nama, $jk, $tempat, $tgl_lahir, $agama,
+                    $alamat, $ayah, $ibu, $p_ayah, $p_ibu, $hp, $kelas_raw, 
+                    $tahun_masuk
                 ]);
             }
         }
 
-        $pdo->commit(); // Simpan permanen
+        $pdo->commit();
         fclose($handle);
         header("Location: ../../../views/siswa/index.php?pesan=sukses_import");
 
     } catch (Exception $e) {
-        $pdo->rollBack(); // Batalkan jika error
-        die("Error Import: " . $e->getMessage());
+        $pdo->rollBack();
+        die("Error: " . $e->getMessage());
     }
 }
 ?>
