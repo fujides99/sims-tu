@@ -19,7 +19,7 @@
                     <div class="alert alert-danger">Ukuran file maksimal 2MB!</div>
                 <?php endif; ?>
 
-                <form action="../../config/app/surat/proses_surat.php?aksi=tambah" method="POST" enctype="multipart/form-data">
+                <form action="../../config/app/surat_masuk/proses_surat.php?aksi=tambah" method="POST" enctype="multipart/form-data">
                     
                     <div class="row mb-3">
                         <div class="col-md-6">

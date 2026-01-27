@@ -12,12 +12,23 @@ $uri = $_SERVER['REQUEST_URI'];
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         
-        <li class="nav-item">
-            <a href="/sims-tu/views/dashboard/index.php" 
-               class="nav-link text-white <?= (strpos($uri, 'dashboard') !== false) ? 'active bg-primary' : '' ?>" aria-current="page">
-                <i class="bi bi-speedometer2 me-2"></i>
-                Dashboard
+       <li class="nav-item">
+            <a href="#menuSurat" data-bs-toggle="collapse" class="nav-link text-white dropdown-toggle">
+                <i class="bi bi-envelope-paper-fill me-2"></i>
+                Arsip Surat
             </a>
+            <ul class="collapse list-unstyled ps-4 <?= (strpos($_SERVER['REQUEST_URI'], 'surat_') !== false) ? 'show' : '' ?>" id="menuSurat">
+                <li class="mb-1">
+                    <a href="/sims-tu/views/surat_masuk/index.php" class="nav-link text-white text-opacity-75">
+                        <i class="bi bi-arrow-return-right me-2"></i> Surat Masuk
+                    </a>
+                </li>
+                <li>
+                    <a href="/sims-tu/views/surat_keluar/index.php" class="nav-link text-white text-opacity-75">
+                        <i class="bi bi-arrow-return-left me-2"></i> Surat Keluar
+                    </a>
+                </li>
+            </ul>
         </li>
 
         <li>
@@ -27,15 +38,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 Data Siswa
             </a>
         </li>
-
-        <li>
-            <a href="/sims-tu/views/surat/index.php" 
-               class="nav-link text-white <?= (strpos($uri, 'surat') !== false) ? 'active bg-primary' : '' ?>">
-                <i class="bi bi-envelope-paper-fill me-2"></i>
-                Surat Masuk
-            </a>
-        </li>
-
+        
         <li>
             <a href="#" class="nav-link text-white text-muted">
                 <i class="bi bi-person-badge-fill me-2"></i>
