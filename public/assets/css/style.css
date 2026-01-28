@@ -1,0 +1,74 @@
+/* WRAPPER UTAMA */
+#wrapper {
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    transition: all 0.4s ease-in-out; /* Animasi diperhalus */
+}
+
+/* SIDEBAR */
+#sidebar-wrapper {
+    min-width: 290px;
+    max-width: 200px;
+    min-height: 100vh;
+    transition: margin 0.4s ease-in-out;
+    background-color: #212529;
+    
+    /* REVISI: Menambahkan bayangan halus agar tidak ada garis kasar */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); 
+    z-index: 10; /* Agar bayangan berada di atas konten */
+    border-right: none !important; /* Memaksa hapus garis batas */
+}
+
+/* SIDEBAR SEMBUNYI (TOGGLED) */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -290px;
+}
+
+/* KONTEN UTAMA */
+#page-content-wrapper {
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+/* TOMBOL HAMBURGER */
+.btn-toggle-menu {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 0;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+.btn-toggle-menu:hover {
+    color: #0d6efd;
+    transform: scale(1.1); /* Efek zoom sedikit saat hover */
+}
+
+/* RESPONSIF HP */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: -290px;
+        position: fixed; /* Melayang */
+        z-index: 9999;   /* Paling depan */
+        height: 100%;
+        transition: margin 0.3s; /* Animasi geser */
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        width: 100%;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.5); /* Hitam transparan */
+        z-index: 9998;
+    }
+}

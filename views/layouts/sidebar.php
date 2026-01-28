@@ -56,7 +56,7 @@ $uri = $_SERVER['REQUEST_URI'];
             <strong><?= $_SESSION['nama_lengkap'] ?? 'Admin' ?></strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="../auth/profil.php">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item text-danger" href="/sims-tu/views/auth/logout.php">Sign out</a></li>
         </ul>
