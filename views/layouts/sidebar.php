@@ -38,11 +38,12 @@ $uri = $_SERVER['REQUEST_URI'];
                 Data Siswa
             </a>
         </li>
-        
-        <li>
-            <a href="#" class="nav-link text-white text-muted">
+
+        <li class="nav-item">
+            <a href="/sims-tu/views/ptk/index.php" 
+                class="nav-link text-white <?= (strpos($uri, 'ptk') !== false) ? 'active bg-primary' : '' ?>">
                 <i class="bi bi-person-badge-fill me-2"></i>
-                Data Guru (Soon)
+                Data PTK
             </a>
         </li>
     </ul>
