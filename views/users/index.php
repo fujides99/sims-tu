@@ -3,13 +3,13 @@
 require_once '../../config/session_check.php';
 require_once '../../config/database.php';
 
-// Cek akses: Hanya Admin yang boleh akses halaman ini
+// Cek akses
 if ($_SESSION['role'] !== 'admin') {
     echo "<script>alert('Anda bukan Admin!'); window.location='../dashboard/index.php';</script>";
     exit;
 }
 
-// Ambil semua data user
+// Ambil data
 $stmt = $pdo->query("SELECT * FROM users ORDER BY status ASC, role ASC");
 $users = $stmt->fetchAll();
 
@@ -28,15 +28,19 @@ require_once '../layouts/header.php';
 
             <?php if (isset($_GET['pesan'])): ?>
                 <?php if ($_GET['pesan'] == 'sukses_tambah'): ?>
-                    <div class="alert alert-success alert-dismissible fade show">User baru berhasil ditambahkan! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                    <div class="alert alert-success alert-dismissible fade show">User berhasil ditambahkan! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                 <?php elseif ($_GET['pesan'] == 'sukses_edit'): ?>
-                    <div class="alert alert-info alert-dismissible fade show">Data user berhasil diperbarui! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-                <?php elseif ($_GET['pesan'] == 'sukses_hapus'): ?>
-                    <div class="alert alert-secondary alert-dismissible fade show">User berhasil dinonaktifkan (Soft Delete). <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                    <div class="alert alert-info alert-dismissible fade show">Data diperbarui! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                
+                <?php elseif ($_GET['pesan'] == 'sukses_nonaktif'): ?>
+                    <div class="alert alert-warning alert-dismissible fade show"><i class="bi bi-pause-circle me-2"></i>User berhasil <strong>dinonaktifkan</strong> (Akses dicabut). <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                <?php elseif ($_GET['pesan'] == 'sukses_aktif'): ?>
+                    <div class="alert alert-success alert-dismissible fade show"><i class="bi bi-check-circle me-2"></i>User berhasil <strong>diaktifkan</strong> kembali. <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                <?php elseif ($_GET['pesan'] == 'sukses_hapus_permanen'): ?>
+                    <div class="alert alert-danger alert-dismissible fade show"><i class="bi bi-trash-fill me-2"></i>User telah <strong>dihapus permanen</strong> dari database. <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                
                 <?php elseif ($_GET['pesan'] == 'gagal_username'): ?>
-                    <div class="alert alert-danger alert-dismissible fade show"><strong>Gagal!</strong> Username sudah digunakan user lain. <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-                <?php elseif ($_GET['pesan'] == 'gagal_hapus_diri'): ?>
-                    <div class="alert alert-warning alert-dismissible fade show">Anda tidak bisa menonaktifkan akun sendiri! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                    <div class="alert alert-danger alert-dismissible fade show">Username sudah digunakan! <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                 <?php endif; ?>
             <?php endif; ?>
 
@@ -49,13 +53,12 @@ require_once '../layouts/header.php';
                             <th>Username</th>
                             <th>Role</th>
                             <th>Status</th>
-                            <th>Terdaftar</th>
-                            <th>Aksi</th>
+                            <th style="width: 20%;">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $no=1; foreach($users as $u): ?>
-                        <tr class="<?= $u['status'] == 'nonaktif' ? 'table-secondary text-muted' : '' ?>">
+                        <tr class="<?= ($u['status'] == 'nonaktif') ? 'table-secondary text-muted' : '' ?>">
                             <td><?= $no++ ?></td>
                             <td><?= htmlspecialchars($u['nama_lengkap']) ?></td>
                             <td class="fw-bold"><?= htmlspecialchars($u['username']) ?></td>
@@ -63,7 +66,7 @@ require_once '../layouts/header.php';
                             <td>
                                 <?php if($u['role'] == 'admin'): ?>
                                     <span class="badge bg-danger">Admin</span>
-                                <?php else: ?>
+                                <?php elseif($u['role'] == 'operator'): ?>
                                     <span class="badge bg-primary">Operator</span>
                                 <?php endif; ?>
                             </td>
@@ -75,8 +78,6 @@ require_once '../layouts/header.php';
                                     <span class="badge bg-secondary">Nonaktif</span>
                                 <?php endif; ?>
                             </td>
-
-                            <td class="small"><?= date('d/m/Y H:i', strtotime($u['created_at'])) ?></td>
                             
                             <td>
                                 <div class="btn-group">
@@ -90,14 +91,28 @@ require_once '../layouts/header.php';
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
 
-                                    <?php if($u['status'] == 'aktif'): ?>
+                                    <?php if($u['id'] != $_SESSION['user_id']): ?>
+                                        
+                                        <?php if($u['status'] == 'aktif'): ?>
+                                            <a href="../../config/app/users/proses_user.php?aksi=ubah_status&id=<?= $u['id'] ?>&set=nonaktif" 
+                                               class="btn btn-sm btn-secondary" title="Nonaktifkan User"
+                                               onclick="return confirm('Nonaktifkan user ini? Dia tidak akan bisa login lagi.');">
+                                                <i class="bi bi-power"></i>
+                                            </a>
+                                        <?php else: ?>
+                                            <a href="../../config/app/users/proses_user.php?aksi=ubah_status&id=<?= $u['id'] ?>&set=aktif" 
+                                               class="btn btn-sm btn-success" title="Aktifkan User"
+                                               onclick="return confirm('Aktifkan kembali user ini?');">
+                                                <i class="bi bi-check-lg"></i>
+                                            </a>
+                                        <?php endif; ?>
+
                                         <a href="../../config/app/users/proses_user.php?aksi=hapus&id=<?= $u['id'] ?>" 
-                                           class="btn btn-sm btn-danger" 
-                                           onclick="return confirm('Nonaktifkan user ini? User tidak akan bisa login lagi.');">
-                                            <i class="bi bi-person-x-fill"></i>
+                                           class="btn btn-sm btn-danger" title="Hapus Permanen"
+                                           onclick="return confirm('PERINGATAN: Hapus Permanen?\n\nData ini akan hilang selamanya dan tidak bisa dikembalikan!');">
+                                            <i class="bi bi-trash-fill"></i>
                                         </a>
-                                    <?php else: ?>
-                                        <button class="btn btn-sm btn-secondary" disabled><i class="bi bi-trash"></i></button>
+
                                     <?php endif; ?>
                                 </div>
                             </td>
@@ -119,30 +134,18 @@ require_once '../layouts/header.php';
             </div>
             <form action="../../config/app/users/proses_user.php?aksi=tambah" method="POST">
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label>Nama Lengkap</label>
-                        <input type="text" name="nama_lengkap" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Username (Untuk Login)</label>
-                        <input type="text" name="username" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Password</label>
-                        <input type="password" name="password" class="form-control" required placeholder="Minimal 6 karakter">
-                    </div>
+                    <div class="mb-3"><label>Nama Lengkap</label><input type="text" name="nama_lengkap" class="form-control" required></div>
+                    <div class="mb-3"><label>Username</label><input type="text" name="username" class="form-control" required></div>
+                    <div class="mb-3"><label>Password</label><input type="password" name="password" class="form-control" required></div>
                     <div class="mb-3">
                         <label>Role Akses</label>
                         <select name="role" class="form-select" required>
-                            <option value="operator">Operator</option>
-                            <option value="admin">Administrator</option>
+                            <option value="operator">Operator (Bisa Input/Edit)</option>
+                            <option value="admin">Administrator (Full)</option>
                         </select>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-primary">Simpan User</button>
-                </div>
+                <div class="modal-footer"><button type="submit" class="btn btn-primary">Simpan</button></div>
             </form>
         </div>
     </div>
@@ -158,42 +161,18 @@ require_once '../layouts/header.php';
             <form action="../../config/app/users/proses_user.php?aksi=edit" method="POST">
                 <div class="modal-body">
                     <input type="hidden" name="id" id="edit_id">
-                    
-                    <div class="mb-3">
-                        <label>Nama Lengkap</label>
-                        <input type="text" name="nama_lengkap" id="edit_nama" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Username</label>
-                        <input type="text" name="username" id="edit_username" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Password Baru</label>
-                        <input type="password" name="password" class="form-control" placeholder="(Kosongkan jika tidak diganti)">
-                        <small class="text-muted fst-italic">Isi hanya jika ingin mereset password user ini.</small>
-                    </div>
-                    
-                    <div class="row">
+                    <div class="mb-3"><label>Nama Lengkap</label><input type="text" name="nama_lengkap" id="edit_nama" class="form-control" required></div>
+                    <div class="mb-3"><label>Username</label><input type="text" name="username" id="edit_username" class="form-control" required></div>
+                    <div class="mb-3"><label>Password Baru</label><input type="password" name="password" class="form-control" placeholder="(Kosongkan jika tidak diganti)"></div>
                         <div class="col-6">
                             <label>Role</label>
                             <select name="role" id="edit_role" class="form-select">
-                                <option value="operator">Operator</option>
+                                <option value="operator">Operator</option> 
                                 <option value="admin">Administrator</option>
                             </select>
-                        </div>
-                        <div class="col-6">
-                            <label>Status Akun</label>
-                            <select name="status" id="edit_status" class="form-select fw-bold">
-                                <option value="aktif" class="text-success">Aktif</option>
-                                <option value="nonaktif" class="text-secondary">Nonaktif</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-warning px-4">Update</button>
-                </div>
+                <div class="modal-footer"><button type="submit" class="btn btn-warning">Update</button></div>
             </form>
         </div>
     </div>
@@ -204,19 +183,11 @@ require_once '../layouts/header.php';
 <script>
     $(document).ready(function() {
         $('.btn-edit').click(function() {
-            // Ambil data dari atribut tombol
-            var id = $(this).data('id');
-            var nama = $(this).data('nama');
-            var username = $(this).data('username');
-            var role = $(this).data('role');
-            var status = $(this).data('status');
-
-            // Masukkan ke dalam input form modal
-            $('#edit_id').val(id);
-            $('#edit_nama').val(nama);
-            $('#edit_username').val(username);
-            $('#edit_role').val(role);
-            $('#edit_status').val(status);
+            $('#edit_id').val($(this).data('id'));
+            $('#edit_nama').val($(this).data('nama'));
+            $('#edit_username').val($(this).data('username'));
+            $('#edit_role').val($(this).data('role'));
+            $('#edit_status').val($(this).data('status'));
         });
     });
 </script>

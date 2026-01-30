@@ -1,0 +1,23 @@
+# Abaikan file sistem
+.DS_Store
+Thumbs.db
+*.log
+
+# Abaikan file konfigurasi rahasia
+config/database.php
+
+# Abaikan isi folder upload (tapi folder tetap ada)
+public/uploads/profil/*
+public/uploads/surat_masuk/*
+public/uploads/surat_keluar/*
+!public/uploads/profil/.gitkeep
+!public/uploads/surat_masuk/.gitkeep
+!public/uploads/surat_keluar/.gitkeep
+
+# Abaikan file sampah/backup
+*.csv
+*.txt
+*.sql.gz
+full_code.txt
+struktur.txt
+temp/

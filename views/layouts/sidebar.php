@@ -1,64 +1,39 @@
-<?php
-// Logika sederhana untuk menentukan menu aktif
-// Mengambil URL saat ini, misal: /sims-tu/views/siswa/index.php
-$uri = $_SERVER['REQUEST_URI'];
-?>
+<a href="../dashboard/index.php" class="list-group-item list-group-item-action bg-transparent text-white border-0 py-2 mb-1">
+    <i class="bi bi-speedometer2 me-3"></i> Dashboard
+</a>
 
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; min-height: 100vh;">
-    <a href="/sims-tu/views/dashboard/index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <i class="bi bi-building fs-4 me-2"></i>
-        <span class="fs-4 fw-bold">SIMS SMP</span>
+<div class="text-white-50 small fw-bold px-3 mt-4 mb-2 text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Data Utama</div>
+
+<a href="../siswa/index.php" class="list-group-item list-group-item-action bg-transparent text-white-50 border-0 py-2">
+    <i class="bi bi-people-fill me-3"></i> Data Siswa
+</a>
+<a href="../ptk/index.php" class="list-group-item list-group-item-action bg-transparent text-white-50 border-0 py-2">
+    <i class="bi bi-person-workspace me-3"></i> Data Guru / PTK
+</a>
+
+<div class="text-white-50 small fw-bold px-3 mt-4 mb-2 text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Administrasi</div>
+
+<a href="../surat_masuk/index.php" class="list-group-item list-group-item-action bg-transparent text-white-50 border-0 py-2">
+    <i class="bi bi-envelope-paper-fill me-3"></i> Surat Masuk
+</a>
+<a href="../surat_keluar/index.php" class="list-group-item list-group-item-action bg-transparent text-white-50 border-0 py-2">
+    <i class="bi bi-send-fill me-3"></i> Surat Keluar
+</a>
+
+<?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
+    <div class="text-white-50 small fw-bold px-3 mt-4 mb-2 text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Pengaturan</div>
+    
+    <a href="../users/index.php" class="list-group-item list-group-item-action bg-transparent text-white-50 border-0 py-2">
+        <i class="bi bi-people me-3"></i> Manajemen User
     </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-        
-       <li class="nav-item">
-            <a href="#menuSurat" data-bs-toggle="collapse" class="nav-link text-white dropdown-toggle">
-                <i class="bi bi-envelope-paper-fill me-2"></i>
-                Arsip Surat
-            </a>
-            <ul class="collapse list-unstyled ps-4 <?= (strpos($_SERVER['REQUEST_URI'], 'surat_') !== false) ? 'show' : '' ?>" id="menuSurat">
-                <li class="mb-1">
-                    <a href="/sims-tu/views/surat_masuk/index.php" class="nav-link text-white text-opacity-75">
-                        <i class="bi bi-arrow-return-right me-2"></i> Surat Masuk
-                    </a>
-                </li>
-                <li>
-                    <a href="/sims-tu/views/surat_keluar/index.php" class="nav-link text-white text-opacity-75">
-                        <i class="bi bi-arrow-return-left me-2"></i> Surat Keluar
-                    </a>
-                </li>
-            </ul>
-        </li>
+<?php endif; ?>
 
-        <li>
-            <a href="/sims-tu/views/siswa/index.php" 
-               class="nav-link text-white <?= (strpos($uri, 'siswa') !== false) ? 'active bg-primary' : '' ?>">
-                <i class="bi bi-people-fill me-2"></i>
-                Data Siswa
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a href="/sims-tu/views/ptk/index.php" 
-                class="nav-link text-white <?= (strpos($uri, 'ptk') !== false) ? 'active bg-primary' : '' ?>">
-                <i class="bi bi-person-badge-fill me-2"></i>
-                Data PTK
-            </a>
-        </li>
-    </ul>
-    
-    <hr>
-    
-    <div class="dropdown">
-        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://ui-avatars.com/api/?name=Admin+TU&background=random" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong><?= $_SESSION['nama_lengkap'] ?? 'Admin' ?></strong>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="../auth/profil.php">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="/sims-tu/views/auth/logout.php">Sign out</a></li>
-        </ul>
-    </div>
-</div>
+<style>
+    .list-group-item-action:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #fff !important;
+        border-radius: 8px;
+        padding-left: 1.5rem !important;
+        transition: all 0.2s;
+    }
+</style>

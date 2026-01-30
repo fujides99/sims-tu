@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
         
         <div class="text-center mt-3 text-muted">
-            <small>Default: admin / admin123</small>
+            <small> Login sebagai admin atau operator</small>
         </div>
     </div>
 

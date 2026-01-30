@@ -3,6 +3,12 @@
 session_start();
 require_once '../../database.php';
 
+// Pastikan hanya admin yang bisa akses file proses ini
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../../../views/dashboard/index.php");
+    exit;
+}
+
 $aksi = $_GET['aksi'] ?? '';
 
 try {
@@ -24,6 +30,7 @@ try {
         // Hash Password (Aman)
         $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
 
+        // Default status saat tambah adalah 'aktif'
         $sql = "INSERT INTO users (nama_lengkap, username, password, role, status) VALUES (?, ?, ?, ?, 'aktif')";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$nama, $username, $hashed_pass, $role]);
@@ -64,8 +71,26 @@ try {
         header("Location: ../../../views/users/index.php?pesan=sukses_edit");
     }
 
-    // --- 3. SOFT DELETE (NONAKTIFKAN) ---
-    // Kita tidak menghapus baris, tapi mengubah status jadi 'nonaktif'
+    // --- 3. UBAH STATUS (AKTIF/NONAKTIF) - SOFT ACTION ---
+    elseif ($aksi == 'ubah_status') {
+        $id = $_GET['id'];
+        $status_baru = $_GET['set']; // Mengambil parameter ?set=aktif atau ?set=nonaktif
+
+        // Mencegah menonaktifkan akun sendiri yang sedang login
+        if ($id == $_SESSION['user_id']) {
+            header("Location: ../../../views/users/index.php?pesan=gagal_status_diri");
+            exit();
+        }
+
+        $stmt = $pdo->prepare("UPDATE users SET status = ? WHERE id = ?");
+        $stmt->execute([$status_baru, $id]);
+        
+        // Kirim pesan berbeda tergantung statusnya
+        $pesan = ($status_baru == 'nonaktif') ? 'sukses_nonaktif' : 'sukses_aktif';
+        header("Location: ../../../views/users/index.php?pesan=" . $pesan);
+    }
+
+    // --- 4. HAPUS PERMANEN (HARD DELETE) ---
     elseif ($aksi == 'hapus') {
         $id = $_GET['id'];
         
@@ -75,10 +100,11 @@ try {
             exit();
         }
 
-        $stmt = $pdo->prepare("UPDATE users SET status = 'nonaktif' WHERE id = ?");
+        // Hapus data selamanya dari database
+        $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
         $stmt->execute([$id]);
         
-        header("Location: ../../../views/users/index.php?pesan=sukses_hapus");
+        header("Location: ../../../views/users/index.php?pesan=sukses_hapus_permanen");
     }
 
 } catch (PDOException $e) {

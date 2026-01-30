@@ -8,7 +8,7 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,       -- Akan diisi hash password (bukan plain text)
     nama_lengkap VARCHAR(100) NOT NULL,
-    role ENUM('admin', 'staff_tu') DEFAULT 'staff_tu',
+    role ENUM('admin', 'operator') DEFAULT 'admin',
     status ENUM('aktif', 'nonaktif') DEFAULT 'aktif',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX (username)
