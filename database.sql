@@ -1,8 +1,6 @@
--- 1. Buat Database
 CREATE DATABASE db_tu_smp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE db_tu_smp;
 
--- 2. Tabel Users (Untuk Admin & Staf TU)
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -14,27 +12,30 @@ CREATE TABLE users (
     INDEX (username)
 ) ENGINE=InnoDB;
 
--- 3. Tabel Guru
-CREATE TABLE guru (
+CREATE TABLE ptk (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nip VARCHAR(20) UNIQUE NULL,          -- Nullable karena mungkin ada honorer tanpa NIP
     nama_lengkap VARCHAR(100) NOT NULL,
-    jk ENUM('L', 'P') NOT NULL,           -- L = Laki-laki, P = Perempuan
-    tempat_lahir VARCHAR(50),
-    tgl_lahir DATE,
-    alamat TEXT,
-    no_hp VARCHAR(15),
-    status_kepegawaian ENUM('PNS', 'PPPK', 'GTT', 'GTY') DEFAULT 'GTT',
-    mapel_ampu VARCHAR(100),              -- Mata pelajaran utama
+    nuptk VARCHAR(25) NULL,
+    jk ENUM('L', 'P') NOT NULL,
+    tempat_lahir VARCHAR(50) NULL,
+    tgl_lahir DATE NULL,
+    nip VARCHAR(30) NULL,
+    status_kepegawaian VARCHAR(50) NOT NULL,
+    jenis_ptk VARCHAR(50) NOT NULL,
+    gelar_depan VARCHAR(20) NULL,
+    gelar_belakang VARCHAR(20) NULL,
+    jenjang_pendidikan VARCHAR(20) NULL,
+    jurusan_prodi VARCHAR(100) NULL,
+    sertifikasi ENUM('Sudah', 'Belum') DEFAULT 'Belum',
+    tmt_kerja DATE NULL,
+    status_aktif ENUM('Aktif', 'Pensiun', 'Keluar', 'Cuti') DEFAULT 'Aktif',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
+) ENGINE=InnoDB;-- 3. Tabel Guru
 
--- 4. Tabel Siswa (Data Pokok)
--- Didesain untuk menyimpan data penting Buku Induk
 CREATE TABLE siswa (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nis VARCHAR(20) UNIQUE NOT NULL,      -- Nomor Induk Sekolah
-    nisn VARCHAR(20) UNIQUE NOT NULL,     -- Nomor Induk Siswa Nasional
+    nis VARCHAR(20) UNIQUE NOT NULL,      
+    nisn VARCHAR(20) UNIQUE NOT NULL,     
     nama_lengkap VARCHAR(100) NOT NULL,
     jk ENUM('L', 'P') NOT NULL,
     tempat_lahir VARCHAR(50),
@@ -42,38 +43,33 @@ CREATE TABLE siswa (
     agama VARCHAR(20),
     alamat_siswa TEXT,
     
-    -- Data Orang Tua / Wali
     nama_ayah VARCHAR(100),
     nama_ibu VARCHAR(100),
     pekerjaan_ayah VARCHAR(50),
     pekerjaan_ibu VARCHAR(50),
-    no_hp_ortu VARCHAR(15),               -- Penting untuk notifikasi WA kedepannya
-    
-    -- Data Akademik
-    kelas_sekarang VARCHAR(10) NOT NULL,  -- Contoh: '7A', '8B'
+    no_hp_ortu VARCHAR(15),             
+
+    kelas_sekarang VARCHAR(10) NOT NULL, 
     tahun_masuk YEAR NOT NULL,
     status_siswa ENUM('aktif', 'lulus', 'pindah', 'keluar') DEFAULT 'aktif',
     
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
-    -- Index untuk mempercepat pencarian
+
     INDEX (nama_lengkap),
     INDEX (kelas_sekarang)
 ) ENGINE=InnoDB;
 
--- 5. Tabel Surat Masuk
 CREATE TABLE surat_masuk (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    no_agenda VARCHAR(50) UNIQUE,         -- Nomor urut di buku agenda TU
-    no_surat VARCHAR(100) NOT NULL,       -- Nomor asli dari surat yang diterima
-    pengirim VARCHAR(100) NOT NULL,       -- Instansi pengirim
+    no_agenda VARCHAR(50) UNIQUE,         
+    no_surat VARCHAR(100) NOT NULL,       
+    pengirim VARCHAR(100) NOT NULL,      
     perihal TEXT NOT NULL,
-    tgl_surat DATE NOT NULL,              -- Tanggal yang tertera di surat
-    tgl_diterima DATE NOT NULL,           -- Tanggal surat sampai di sekolah
-    file_path VARCHAR(255) NULL,          -- Lokasi file scan (PDF/JPG)
-    
-    -- Relasi: Siapa user yang menginput data ini? (Audit Trail)
+    tgl_surat DATE NOT NULL,           
+    tgl_diterima DATE NOT NULL,          
+    file_path VARCHAR(255) NULL,          
+ 
     input_by INT,
     FOREIGN KEY (input_by) REFERENCES users(id) ON DELETE SET NULL,
     
@@ -82,7 +78,5 @@ CREATE TABLE surat_masuk (
     INDEX (pengirim)
 ) ENGINE=InnoDB;
 
--- Seed Data: Akun Admin Default (Password: admin123)
--- Hash di bawah adalah hasil dari password_hash('admin123', PASSWORD_DEFAULT)
 INSERT INTO users (username, password, nama_lengkap, role) 
 VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Administrator Utama', 'admin');
