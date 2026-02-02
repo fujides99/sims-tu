@@ -1,0 +1,544 @@
+NIS;NISN;Nama;JK (L/P);Tempat Lhr;Tgl Lhr;Agama;Alamat;Nama Ayah;Nama Ibu;Pek. Ayah;Pek. Ibu;No HP;Kelas
+3001;0027816442;Viktor Sirait;L;Palu;2012-04-05;Islam;Jl. Jend. Sudirman No. 10;Ade Wijaya;Dt. Warsita Lailasari;TNI/Polri;PNS;0878748267203;7.1
+3002;0085011170;Rama Suwarno;L;Depok;2011-02-10;Kristen;Jl. Cendrawasih;Victoria Fujiati;Hani Kuswoyo;Pedagang;Wiraswasta;081919734592;8.3
+3003;0097619451;Chelsea Handayani;P;Banjarmasin;2010-09-05;Islam;Jl. Veteran;Lutfan Samosir;Mitra Riyanti, S.Ked;Guru;Pedagang;;9.2
+3004;0059520976;Jamalia Lestari;P;Jakarta;2013-01-02;Islam;Jl. Gajah Mada;Kurnia Wijayanti;Tami Latupono;Lainnya;Perawat;08979969350;8.3
+3005;0076247680;Usyi Mandasari;P;Jayapura;2011-12-12;Islam;Jl. Gejayan;Ratna Widiastuti;Febi Anggraini;Petani;PNS;08164782987;7.3
+3006;0006509519;Tirta Maheswara;L;Kediri;2010-01-21;Islam;Jl. Pattimura;Ina Wastuti;Dimaz Pangestu, S.IP;Guru;PNS;08199687172;9.4
+3007;0019930939;Lala Usada;P;Tangerang;2012-03-03;Islam;Jl. Pahlawan;Darmana Utama;Sari Sihombing;Nelayan;Wiraswasta;08233758469;9.2
+3008;0005256788;Ika Nasyidah;P;Dumai;2011-10-11;Islam;Jl. H. Oemar Said;R. Najam Hidayanto, S.I.Kom;Dt. Bagiya Farida;Dokter;PNS;0815118032500;7.2
+3009;0038318730;Adiarja Prabowo;L;Medan;2009-05-11;Islam;Jl. Kenanga No. 4;Olivia Halim;Yance Prasetya;Wiraswasta;Pedagang;0823343303885;9.4
+3010;0096861710;Winda Hassanah;P;Makassar;2011-03-16;Islam;Jl. Pattimura;Fathonah Mulyani;Malika Januar;Wiraswasta;Wiraswasta;089750976102;9.4
+3011;0010060594;Oliva Anggraini;P;Magelang;2014-01-24;Katolik;Jl. Asia Afrika;Tgk. Kasusra Kusmawati;Rafid Palastri;TNI/Polri;Perawat;;9.2
+3012;0096303118;Dina Andriani;P;Balikpapan;2010-04-16;Katolik;Jl. Gatot Subroto Kav. 12;dr. Ciaobella Putra, M.Pd;Mahfud Samosir;Guru;Guru;0897966089033;7.1
+3013;0039824122;Endah Fujiati;P;Rengat;2012-08-06;Islam;Jl. Gatot Subroto Kav. 12;Ghani Wahyudin;Rama Zulaika;Karyawan Swasta;Pedagang;087754635101;8.3
+3014;0086068147;Damu Iswahyudi;L;Denpasar;2010-04-12;Islam;Jl. Asia Afrika;Hasna Anggraini;Lala Nuraini;Guru;Karyawan Swasta;0856773698319;8.3
+3015;0032265958;Sadina Usamah;P;Aceh;2012-08-10;Islam;Jl. Pattimura;Paiman Firmansyah;Edison Yuniar;Wiraswasta;Pedagang;08598821282;9.3
+3016;0003112448;Ajeng Mulyani;P;Rengat;2010-10-16;Islam;Jl. Kartini;drg. Kiandra Aryani;H. Radit Andriani, S.Pd;Lainnya;Guru;08163837568;7.1
+3017;0066939601;Amalia Utami;P;Denpasar;2012-09-21;Kristen;Jl. Imam Bonjol;Ir. Jane Pradipta;Wasis Jailani;PNS;Pedagang;0823006423884;9.4
+3018;0031610372;Laras Farida;P;Denpasar;2013-08-06;Islam;Jl. Veteran;dr. Dina Nababan, S.Farm;Queen Kusumo;Lainnya;Karyawan Swasta;085788581326;8.1
+3019;0002222836;Lanang Halim;L;Banjarmasin;2011-11-07;Islam;Jl. Braga;Nadia Suwarno;Mursita Hakim;PNS;Guru;081827564033;7.1
+3020;0057654126;Among Samosir;L;Banjarmasin;2012-06-17;Islam;Jl. H. Oemar Said;drg. Ayu Sinaga;Usman Rahimah;Pedagang;Pedagang;081179285217;8.3
+3021;0033912987;Ade Mardhiyah;P;Palu;2010-05-13;Islam;Jl. Pattimura;Raisa Mangunsong;Cut Dina Wahyuni, M.Farm;Nelayan;Lainnya;0897011205349;8.3
+3022;0054394310;Nyana Waskita;L;Kendari;2010-03-19;Islam;Jl. Pahlawan;Calista Waskita;Cut Kayla Permadi, S.IP;Petani;Ibu Rumah Tangga;085940047728;7.2
+3023;0004484482;Violet Laksmiwati;P;Kediri;2011-04-02;Kristen;Jl. Gejayan;Yessi Kusmawati;Edward Irawan, S.E.I;Dokter;Pedagang;0897353222224;8.2
+3024;0074270487;Balijan Ardianto;L;Tembilahan;2011-09-03;Islam;Jl. Teuku Umar;Anastasia Hakim;Lukman Halim;Karyawan Swasta;Ibu Rumah Tangga;081974526599;8.2
+3025;0018698209;Elisa Andriani;P;Bandar Lampung;2011-10-21;Islam;Jl. Thamrin;Ir. Nova Halim, S.Farm;Samiah Wacana;Guru;Karyawan Swasta;087748887750;8.3
+3026;0061781169;Zelaya Nasyiah;P;Tangerang;2013-07-04;Islam;Jl. Gatot Subroto Kav. 12;Jane Zulaika, S.E.;Hj. Amelia Dabukke, M.Kom.;Nelayan;PNS;089799027510;7.2
+3027;0015271970;Natalia Rahayu;P;Madiun;2011-02-02;Islam;Jl. Sisingamangaraja;Intan Halimah;Karsa Purnawati;Nelayan;Pedagang;08582010479;9.4
+3028;0080021229;Yunita Zulaika;P;Jambi;2009-09-27;Islam;Jl. Thamrin;Sidiq Megantara;Radit Prastuti;Wiraswasta;Wiraswasta;;8.1
+3029;0044428508;Uda Mangunsong;L;Bogor;2010-09-10;Islam;Jl. Kartini;Edi Nainggolan;Diana Pranowo;Guru;Perawat;0852217610729;9.3
+3030;0019300299;Hana Zulaika;P;Padang;2011-02-20;Islam;Jl. Hayam Wuruk;Harsanto Lazuardi;Rachel Putra;Sopir;Karyawan Swasta;085332166774;9.1
+3031;0032098119;Kambali Saputra;L;Cirebon;2009-07-05;Islam;Jl. Pattimura;Vanya Megantara;Dewi Hastuti, M.Farm;TNI/Polri;Bidan;;9.1
+3032;0053388824;Omar Wasita;L;Denpasar;2010-06-21;Islam;Jl. Kenanga No. 4;Agnes Mandasari;Asmadi Firmansyah, S.E.;PNS;Wiraswasta;08222078767;9.4
+3033;0002099386;Carla Palastri;P;Balikpapan;2013-09-01;Islam;Jl. Pattimura;Dr. Taufik Pradipta;Emong Yuliarti;Sopir;Guru;;9.4
+3034;0000921787;Prasetya Zulkarnain;L;Kendari;2010-07-11;Islam;Jl. Merdeka Barat;Galiono Suryono;Zulaikha Nasyiah;Wiraswasta;Wiraswasta;08777861529;9.4
+3035;0069217945;Ira Lestari;P;Solo;2011-11-03;Islam;Jl. Kenanga No. 4;Bancar Napitupulu;R.A. Endah Permadi, M.TI.;Lainnya;Wiraswasta;088872856335;7.3
+3036;0042872405;Wani Kuswandari;P;Dumai;2013-10-03;Islam;Jl. Mawar Melati;Galih Waluyo;dr. Gada Nababan;Sopir;Lainnya;08819015841;9.1
+3037;0019379812;Cakrawangsa Situmorang;L;Kediri;2013-12-10;Islam;Jl. Thamrin;R. Rina Siregar;Ina Pradipta;Lainnya;Guru;;7.3
+3038;0081963978;Gilda Suryatmi;P;Malang;2014-01-08;Islam;Jl. Malioboro;Padma Hutagalung;Endah Waluyo, S.Pt;Pedagang;Lainnya;085254019179;7.1
+3039;0039367034;Hasta Saefullah;L;Aceh;2011-02-02;Islam;Jl. Dago Atas;Ade Permata;Belinda Lestari;Wiraswasta;PNS;0882292173108;7.1
+3040;0051048350;Zelaya Pertiwi;P;Banyuwangi;2012-03-26;Islam;Jl. Gatot Subroto Kav. 12;Drs. Hana Maheswara;Restu Mulyani;Wiraswasta;Guru;08977344498;9.4
+3041;0021428213;Titi Zulaika;P;Sorong;2013-06-08;Islam;Jl. Asia Afrika;R. Intan Saragih;Hasna Novitasari;Sopir;Pedagang;08596164790;9.2
+3042;0099922934;Oni Hartati;P;Padang;2009-07-13;Katolik;Jl. Asia Afrika;Winda Halim;Galar Prasasta;Sopir;Pedagang;082365675218;7.1
+3043;0036442207;Mala Wulandari;P;Ambon;2012-01-10;Islam;Jl. Thamrin;Carla Hidayanto;Rina Hasanah;Buruh;Karyawan Swasta;0816462806387;9.3
+3044;0030793546;Daryani Napitupulu;L;Banjarmasin;2010-05-05;Islam;Komplek Griya Indah Blok A;Aisyah Handayani;Nyoman Hidayanto, S.I.Kom;Wiraswasta;PNS;0813529337070;8.2
+3045;0053190288;Raina Hartati;P;Kendari;2009-11-17;Islam;Jl. Pahlawan;Elisa Melani;Ir. Usyi Nurdiyanti;Sopir;Bidan;081223792850;8.3
+3046;0026736253;Icha Lailasari;P;Madiun;2013-12-17;Islam;Jl. Diponegoro No. 88;Natalia Lailasari;Lalita Anggriawan, S.Pd;PNS;Wiraswasta;;8.2
+3047;0021185585;Jinawi Sitompul;L;Cirebon;2009-08-20;Budha;Jl. Kenanga No. 4;Dalimin Hastuti;Tgk. Cinthia Astuti;PNS;Lainnya;;8.3
+3048;0084051346;Umi Haryanti;P;Palu;2012-12-30;Islam;Jl. Kenanga No. 4;Puti Padmi Halim, S.Pt;Karimah Wulandari;Petani;Perawat;0888530210118;7.2
+3049;0086009637;Wirda Laksita;P;Padang;2013-11-26;Islam;Jl. Gajah Mada;Bagus Anggraini;R.A. Aisyah Ardianto, S.E.I;Pedagang;Bidan;0853550249521;7.3
+3050;0018472056;Sidiq Suryono;L;Singkawang;2010-04-24;Islam;Jl. Urip Sumoharjo;Ir. Kamaria Prastuti;Puti Gawati Narpati;Nelayan;Wiraswasta;087709166403;7.2
+3051;0018418279;Amalia Utami;P;Surabaya;2010-12-16;Islam;Komplek Griya Indah Blok A;Hana Kusmawati;Bancar Permadi;Petani;Pedagang;087781074594;8.3
+3052;0056172809;Padmi Yuliarti;P;Gorontalo;2011-02-03;Islam;Jl. Gejayan;Drs. Calista Jailani, M.TI.;Dalimin Usamah;Karyawan Swasta;Guru;;8.2
+3053;0044334092;Tri Pradipta;L;Merauke;2011-04-22;Islam;Jl. Pahlawan;Garan Hutasoit;R.M. Baktiono Gunarto;Buruh;PNS;;9.1
+3054;0022340870;Vanya Wulandari;P;Palangkaraya;2010-11-17;Islam;Jl. Asia Afrika;Ir. Wulan Siregar;dr. Endah Wahyudin, S.Farm;Nelayan;Perawat;0819985797954;9.1
+3055;0046417691;Niyaga Saragih;L;Aceh;2013-06-18;Islam;Jl. Diponegoro No. 88;Gara Anggriawan;Tiara Lestari;Wiraswasta;Wiraswasta;08228337395;7.1
+3056;0060454091;Zaenab Andriani;P;Bandung;2011-08-16;Islam;Jl. Gatot Subroto Kav. 12;Puti Melinda Prasasta, S.I.Kom;KH. Cawisadi Mustofa;Petani;Guru;08225089930;7.1
+3057;0030157671;Carla Padmasari;P;Kupang;2012-03-21;Islam;Jl. Pattimura;Winda Maryati;R. Uchita Hastuti, S.E.;Petani;Karyawan Swasta;0899152745638;8.2
+3058;0050917550;Himawan Tarihoran;L;Kendari;2010-04-11;Islam;Jl. Gatot Subroto Kav. 12;Ir. Juli Kuswandari, S.E.;Drs. Ilsa Siregar, S.Pt;Petani;Guru;08883987609;7.2
+3059;0060482572;Lantar Narpati;L;Banyuwangi;2009-10-16;Islam;Jl. Setiabudi;Agnes Lestari;Zalindra Hasanah;TNI/Polri;PNS;0858795225332;8.2
+3060;0084795068;Eli Hastuti;P;Ambon;2012-12-28;Islam;Jl. Hayam Wuruk;Luthfi Utami;Harto Padmasari;Pedagang;PNS;;7.1
+3061;0034307692;Jamalia Uyainah;P;Bekasi;2010-08-14;Islam;Jl. Setiabudi;Belinda Yulianti;Oliva Tarihoran, S.H.;Buruh;PNS;08154291659;8.3
+3062;0075754468;Among Narpati;L;Gorontalo;2009-02-16;Islam;Jl. Veteran;Gangsa Halim;Karja Purnawati, S.Ked;Dokter;Wiraswasta;08775693108;8.3
+3063;0098834005;Yance Palastri;P;Bandar Lampung;2013-06-02;Islam;Jl. Antasari;Tirtayasa Samosir;Garda Ramadan;Buruh;Bidan;0855109419805;8.1
+3064;0031546892;Harimurti Tamba;L;Tembilahan;2012-02-21;Islam;Jl. Diponegoro No. 88;Nadia Saefullah;Samiah Pranowo;Petani;Guru;0896549058305;9.1
+3065;0099148589;Lintang Widiastuti;P;Samarinda;2011-03-24;Islam;Jl. Braga;Hesti Winarsih;Tira Andriani;Sopir;Pedagang;087879981936;7.3
+3066;0096104833;Galang Saefullah;L;Kendari;2009-06-05;Islam;Jl. Veteran;R.M. Bagya Namaga, S.Pd;Dr. Caket Saputra, M.Kom.;Lainnya;Ibu Rumah Tangga;08973856019;7.1
+3067;0027992634;Margana Tamba;L;Yogyakarta;2009-02-04;Islam;Jl. Jend. Sudirman No. 10;Narji Pradipta;Anom Laksmiwati;Buruh;Lainnya;08788567784;9.2
+3068;0023119293;Margana Hutagalung;L;Merauke;2010-08-27;Katolik;Jl. Pattimura;Warta Prasetyo;dr. Kasiyah Susanti, S.Psi;Sopir;Ibu Rumah Tangga;08183954439;9.2
+3069;0014012210;Daryani Sitompul;L;Mataram;2012-11-29;Kristen;Jl. Diponegoro No. 88;drg. Aisyah Lestari, S.E.;Tri Marpaung, M.Kom.;Sopir;Ibu Rumah Tangga;08587486173;8.3
+3070;0019454380;Jaga Gunawan;L;Palu;2011-07-26;Katolik;Jl. Kaliurang km 5;Hendra Marpaung;Puti Tari Hastuti;Karyawan Swasta;Pedagang;;9.2
+3071;0054426287;Vicky Pertiwi;P;Kediri;2013-02-11;Islam;Jl. Sisingamangaraja;Shakila Saptono;Drs. Vivi Wastuti, M.Pd;Lainnya;PNS;0822773253590;8.2
+3072;0018867221;Lanang Dongoran;L;Bogor;2009-12-19;Islam;Jl. Merdeka Barat;Rina Wasita;Salman Purnawati, S.Farm;Sopir;Guru;08189715898;8.1
+3073;0031263488;Yunita Nasyiah;P;Palembang;2011-03-04;Islam;Jl. Gejayan;Maras Halimah;Cut Elma Siregar, M.M.;Dokter;PNS;0852015975289;9.4
+3074;0031125069;Yunita Yuniar;P;Malang;2009-02-15;Islam;Jl. H. Oemar Said;Tgk. Agnes Kuswandari;Padmi Mulyani, S.Farm;PNS;Lainnya;0878784747752;7.1
+3075;0014295343;Anita Safitri;P;Semarang;2013-06-27;Islam;Jl. Diponegoro No. 88;T. Pranawa Sitompul;R. Hamima Hutasoit;Sopir;Karyawan Swasta;0858120559338;9.1
+3076;0064595314;Bakidin Suwarno;L;Dumai;2011-06-14;Islam;Jl. Gejayan;Laras Widiastuti;Puti Raina Rahmawati, S.Sos;Lainnya;Ibu Rumah Tangga;08811899494;9.3
+3077;0048612866;Zulaikha Palastri;P;Probolinggo;2013-01-07;Islam;Jl. Cendrawasih;Gandi Prabowo;Mahesa Oktaviani;Sopir;Guru;08212877203;7.1
+3078;0053671634;Salwa Pudjiastuti;P;Bandung;2010-12-22;Islam;Jl. Braga;Ir. Cinthia Pratiwi, S.Pt;Puti Latupono;Sopir;Pedagang;08994689234;9.4
+3079;0012420509;Prasetyo Mandala;L;Bengkulu;2009-03-06;Islam;Jl. Mawar Melati;Melinda Wulandari;Ifa Hardiansyah, S.H.;Sopir;Pedagang;0882501664833;9.2
+3080;0002554202;Ophelia Rahmawati;P;Cirebon;2013-12-09;Islam;Jl. Mawar Melati;R. Yance Safitri, S.H.;Putri Prasetyo, M.Kom.;PNS;Ibu Rumah Tangga;088891087277;7.1
+3081;0066050759;Dinda Hassanah;P;Batam;2010-10-14;Islam;Jl. Hayam Wuruk;Irma Winarno;Paris Kuswoyo;Nelayan;Lainnya;08214776601;9.3
+3082;0090356615;Chelsea Hassanah;P;Banjarmasin;2012-08-15;Islam;Jl. H. Oemar Said;Ir. Wakiman Rajasa, S.E.;Febi Hardiansyah, S.Sos;Buruh;Ibu Rumah Tangga;;9.4
+3083;0092320862;Belinda Nasyidah;P;Kendari;2012-09-16;Islam;Jl. Setiabudi;Warsa Simanjuntak;Harto Maulana;Sopir;Perawat;;7.3
+3084;0005724806;Tantri Puspasari;P;Aceh;2010-12-16;Islam;Gang Kelinci No. 3;Indra Wasita;Salsabila Hasanah;Karyawan Swasta;Guru;081564951529;9.1
+3085;0089851221;Danang Pradana;L;Medan;2012-04-26;Budha;Jl. Kenanga No. 4;Mujur Nurdiyanti;Luwar Agustina;Pedagang;Guru;08594900995;8.1
+3086;0044568735;Mutia Riyanti;P;Tegal;2010-02-02;Islam;Jl. Antasari;R. Zulfa Wulandari, M.Ak;Lintang Prasetya, S.Kom;PNS;Guru;08154860539;7.1
+3087;0043022817;Banawa Saragih;L;Bekasi;2013-12-02;Islam;Jl. Kaliurang km 5;Oni Hidayanto;T. Purwadi Wibowo, S.Psi;TNI/Polri;Guru;0819766173530;9.2
+3088;0052620537;Unjani Melani;P;Kupang;2009-02-12;Budha;Jl. Teuku Umar;Anastasia Mustofa;dr. Farhunnisa Palastri, S.Psi;Sopir;Lainnya;081211793829;9.2
+3089;0047270493;Nurul Hariyah;P;Palangkaraya;2010-03-10;Islam;Jl. Gajah Mada;T. Jati Firgantoro, S.IP;Aisyah Najmudin;Dokter;Pedagang;0813829329772;9.4
+3090;0078654134;Setya Habibi;L;Cirebon;2012-06-03;Katolik;Jl. Antasari;Kadir Hutagalung;Cinthia Iswahyudi;Sopir;Karyawan Swasta;0815615790336;7.2
+3091;0047306160;Gambira Siregar;L;Kupang;2012-11-13;Islam;Jl. Sisingamangaraja;R. Jessica Sirait, M.Farm;Upik Setiawan;Lainnya;Pedagang;;8.1
+3092;0078035657;Hana Hariyah;P;Palembang;2012-11-11;Islam;Jl. Ahmad Yani No. 5;Hj. Ade Suryatmi;Tami Hakim;Buruh;Lainnya;08597602969;9.1
+3093;0020015952;Kasiran Situmorang;L;Bandar Lampung;2010-09-03;Islam;Jl. Kaliurang km 5;Cinthia Wahyudin;R.A. Tiara Hutasoit;Nelayan;PNS;08141441428;7.3
+3094;0067561284;Hasan Saputra;L;Makassar;2012-10-18;Islam;Jl. Thamrin;Dr. Jaeman Zulkarnain;Karsana Widodo;Dokter;Bidan;;9.1
+3095;0056724472;Kartika Nurdiyanti;P;Kupang;2013-09-22;Islam;Jl. Antasari;R. Anita Handayani;Cakrajiya Budiman;TNI/Polri;Guru;08121930086;7.1
+3096;0098554539;Gading Maryadi;L;Bekasi;2011-01-19;Kristen;Jl. Dago Atas;Ulya Hutasoit, M.Farm;Intan Prasetya, S.Gz;TNI/Polri;Pedagang;081400552039;9.1
+3097;0035616188;Puput Wastuti;P;Malang;2009-03-05;Islam;Jl. Thamrin;R. Hartana Namaga, S.Pd;Candra Thamrin;Wiraswasta;Lainnya;081581114584;8.1
+3098;0034384222;Harimurti Maulana;L;Singkawang;2009-08-25;Islam;Jl. Braga;Nurul Hariyah;Tgk. Danuja Palastri;PNS;PNS;08779504378;7.1
+3099;0073769701;Kawaya Pradipta;L;Mataram;2009-03-09;Budha;Jl. Jend. Sudirman No. 10;Hamima Palastri;Irma Hartati;Karyawan Swasta;Ibu Rumah Tangga;0897873915158;7.1
+3100;0052753123;Daru Santoso;L;Tembilahan;2012-03-16;Kristen;Jl. Antasari;Sarah Budiman;R.A. Keisha Padmasari;Lainnya;Karyawan Swasta;0897944322596;9.3
+3101;0046557311;Gawati Padmasari;P;Tangerang;2010-12-20;Islam;Jl. Kenanga No. 4;Drs. Harsaya Widodo;Endah Padmasari, S.Farm;Guru;PNS;0855619774772;7.1
+3102;0044759196;Jaga Dongoran;L;Kediri;2011-04-03;Islam;Jl. Kartini;T. Kambali Rahayu, S.E.I;Icha Uwais;Buruh;PNS;089945094433;8.3
+3103;0095115364;Gina Pertiwi;P;Yogyakarta;2013-08-29;Islam;Jl. Kartini;Ajimat Rahayu;Halima Pratiwi;PNS;Lainnya;08148816523;7.2
+3104;0010380190;Mutia Mandasari;P;Ambon;2013-01-25;Islam;Komplek Griya Indah Blok A;Raden Sudiati;dr. Intan Hariyah, M.Pd;Dokter;PNS;08972471335;9.1
+3105;0058465411;Karen Hastuti;P;Ambon;2011-06-21;Islam;Jl. Kartini;Mursita Wahyudin, S.Farm;Titi Hassanah;Petani;Ibu Rumah Tangga;087791352675;9.2
+3106;0087392956;Nabila Yuniar;P;Jakarta;2009-03-25;Katolik;Jl. Kenanga No. 4;Jindra Hakim;Kasiyah Hutasoit, S.E.;Petani;Guru;0897587139816;9.2
+3107;0092636570;Cinthia Hariyah;P;Padang;2010-12-10;Islam;Jl. Kartini;R. Ayu Rahayu;dr. Dimas Napitupulu, M.Ak;Sopir;Pedagang;082267058327;9.2
+3108;0059987820;Tiara Wijayanti;P;Magelang;2012-09-09;Islam;Jl. Antasari;Dr. Wasis Yuniar, S.I.Kom;Arta Firgantoro;Wiraswasta;Lainnya;08175691646;9.3
+3109;0037383936;Nasrullah Salahudin;L;Palangkaraya;2011-01-21;Islam;Jl. Cendrawasih;Diana Suryono;Dewi Sihotang;Wiraswasta;Bidan;0818047603215;7.3
+3110;0053526123;Gaduh Mansur;L;Tegal;2013-05-24;Islam;Jl. Malioboro;Eka Usamah;Cawisono Santoso;Sopir;Lainnya;089731137577;9.3
+3111;0046847079;Nadine Sudiati;P;Solo;2009-10-16;Islam;Jl. Jend. Sudirman No. 10;Zalindra Wacana;Keisha Rajata;Wiraswasta;Lainnya;0882971575967;7.2
+3112;0051369019;Gilda Yuliarti;P;Kupang;2009-07-04;Islam;Jl. Thamrin;Vera Siregar;Cornelia Maulana;Petani;Guru;0822821196421;7.2
+3113;0034607787;Aslijan Putra;L;Ambon;2009-03-10;Islam;Jl. Gatot Subroto Kav. 12;Farhunnisa Saefullah;Dr. Juli Wijayanti;Pedagang;Lainnya;081301495223;7.1
+3114;0017788706;Cayadi Tamba;L;Tegal;2012-06-01;Islam;Jl. Urip Sumoharjo;Bella Kuswoyo;Purwanto Yuniar;Dokter;Lainnya;0819582248151;8.2
+3115;0098198109;Gamanto Waluyo;L;Solo;2010-01-11;Islam;Jl. Kaliurang km 5;KH. Cengkir Mansur, S.Kom;Tri Kusumo;TNI/Polri;Wiraswasta;08528669428;9.2
+3116;0084461962;Warsita Saptono;L;Solo;2009-03-03;Islam;Jl. Veteran;Dr. Nyoman Putra, S.Ked;drg. Siska Irawan, S.E.I;Petani;Bidan;08981814204;7.2
+3117;0009987867;Panca Prasasta;L;Kupang;2011-12-23;Islam;Jl. Hayam Wuruk;Dr. Raina Wahyudin;Kania Pudjiastuti;Pedagang;Karyawan Swasta;0898919909422;8.2
+3118;0082252278;Raden Najmudin;L;Makassar;2009-05-20;Kristen;Jl. Veteran;Kanda Lailasari;H. Ikhsan Gunawan;Sopir;Lainnya;081745943704;7.1
+3119;0083425595;Eli Wastuti;P;Kupang;2013-04-21;Islam;Jl. Cendrawasih;Gabriella Anggriawan;Shania Mahendra;Nelayan;Wiraswasta;08530683366;9.1
+3120;0071470515;Narji Waluyo;L;Banyuwangi;2009-04-05;Islam;Jl. Pahlawan;Endah Purwanti;T. Hasim Astuti, S.Sos;Pedagang;Pedagang;081842343359;8.3
+3121;0086036606;Irma Kuswandari;P;Depok;2010-05-05;Budha;Jl. Mawar Melati;Ami Situmorang;Lulut Hakim;Petani;PNS;08999141252;8.2
+3122;0095192246;Ina Riyanti;P;Bandar Lampung;2012-01-14;Islam;Jl. Mawar Melati;Jaka Aryani;Gaman Samosir, S.Ked;Lainnya;Lainnya;0816571645135;8.3
+3123;0084274127;Mitra Habibi;L;Aceh;2013-07-21;Islam;Jl. Antasari;Ir. Safina Rahayu, S.Farm;Makara Zulkarnain, S.H.;Pedagang;Guru;088109139849;8.1
+3124;0080937012;Puti Winarsih;P;Banyuwangi;2011-06-03;Kristen;Jl. Gejayan;Vera Wacana;Dt. Daniswara Mayasari, M.Pd;Lainnya;Karyawan Swasta;081984936412;8.2
+3125;0005174091;Gatra Sirait;L;Solo;2011-01-23;Islam;Jl. Jend. Sudirman No. 10;Lidya Laksita;Vera Mahendra;PNS;PNS;08141419188;9.2
+3126;0080839425;Mulyono Dongoran;L;Jambi;2009-03-10;Islam;Gang Kelinci No. 3;Sutan Kenari Oktaviani;Drs. Rina Winarsih;Wiraswasta;PNS;081189086568;7.3
+3127;0039601191;Yessi Laksmiwati;P;Tasikmalaya;2009-07-07;Islam;Jl. Mawar Melati;Vero Mulyani;Ifa Rajasa, M.Kom.;TNI/Polri;Bidan;0814510503622;8.3
+3128;0020614832;Galak Marpaung;L;Ambon;2013-09-05;Islam;Jl. Thamrin;Ajeng Sitompul;Tgk. Jarwadi Prabowo, S.Pt;Lainnya;Perawat;0821995513584;9.3
+3129;0023028071;Viman Sitorus;L;Yogyakarta;2009-04-10;Budha;Jl. Braga;Siska Santoso;Mutia Padmasari;Wiraswasta;Bidan;085836477114;7.3
+3130;0043997918;Mila Lailasari;P;Madiun;2010-11-12;Islam;Jl. Sisingamangaraja;Laras Winarsih;Jayeng Utama;Lainnya;Karyawan Swasta;085369480047;8.2
+3131;0082846762;Among Prayoga;L;Kupang;2013-09-04;Islam;Gang Kelinci No. 3;Uda Tamba, S.Ked;Jaka Waluyo;Wiraswasta;Bidan;085743910830;7.2
+3132;0075938281;Ade Hasanah;P;Jakarta;2012-07-14;Islam;Jl. Gajah Mada;Zelaya Lestari;Safina Tarihoran;TNI/Polri;Wiraswasta;08989159640;9.4
+3133;0019357569;Yono Maryadi;L;Kupang;2013-06-07;Islam;Jl. Kaliurang km 5;Lantar Hastuti;Hafshah Wahyudin, S.Psi;Dokter;Karyawan Swasta;08988550808;7.3
+3134;0091331130;Zahra Wijayanti;P;Purwokerto;2011-04-10;Hindu;Komplek Griya Indah Blok A;Samiah Dongoran;H. Muni Sitorus;Nelayan;Guru;085972051815;7.1
+3135;0035387522;Jelita Novitasari;P;Padang;2013-10-22;Islam;Jl. Gatot Subroto Kav. 12;Dr. Endra Winarno, M.M.;Prayitna Pradana;Buruh;Karyawan Swasta;085656459410;9.4
+3136;0042205276;Jamalia Padmasari;P;Sorong;2009-06-06;Islam;Jl. Urip Sumoharjo;Rika Putra;Virman Yuniar;Karyawan Swasta;Lainnya;081210723519;9.4
+3137;0002534996;Jail Sihotang;L;Denpasar;2013-01-31;Kristen;Jl. Kaliurang km 5;Violet Uwais, S.E.I;Jessica Waluyo;TNI/Polri;Lainnya;0855143885129;9.4
+3138;0087308517;Najib Gunarto;L;Kupang;2011-01-01;Katolik;Jl. H. Oemar Said;Kajen Wastuti;Harjo Pratiwi;Dokter;Perawat;0897048852948;9.3
+3139;0059359972;Siti Hasanah;P;Palangkaraya;2010-01-15;Islam;Jl. Braga;Garan Anggraini;Lala Wibowo;Buruh;Bidan;0856167862503;8.1
+3140;0084737827;Maras Budiyanto;L;Bandar Lampung;2012-07-15;Islam;Jl. Cendrawasih;Drs. Raina Gunarto, S.E.I;Melinda Siregar;Guru;Pedagang;08564474267;7.1
+3141;0089703087;Tasdik Sitompul;L;Palangkaraya;2011-07-15;Hindu;Jl. Cendrawasih;Ir. Ratna Suryono;Sari Hartati;Karyawan Swasta;Bidan;;8.3
+3142;0050227862;Dipa Marpaung;L;Bogor;2009-05-08;Budha;Jl. Urip Sumoharjo;Lembah Rajata;Patricia Sihombing;Nelayan;Perawat;08823591313;7.1
+3143;0078118724;Dina Handayani;P;Pontianak;2012-10-14;Islam;Jl. H. Oemar Said;R. Erik Maryadi, M.Farm;Intan Tamba, S.E.;Nelayan;Ibu Rumah Tangga;08969561539;9.1
+3144;0047785448;Danang Latupono;L;Merauke;2014-01-20;Islam;Jl. Setiabudi;Maras Mayasari;Taufik Usada, S.T.;Petani;PNS;089847086502;7.2
+3145;0061689009;Atmaja Natsir;L;Probolinggo;2009-02-24;Kristen;Jl. Kenanga No. 4;Almira Latupono, S.Psi;Lidya Mardhiyah;Lainnya;PNS;08525974255;8.1
+3146;0044823465;Jais Rajasa;L;Tangerang;2011-01-12;Islam;Jl. Antasari;Puti Wani Anggriawan, S.Psi;Muhammad Megantara;PNS;Karyawan Swasta;08526856192;8.2
+3147;0046776806;Ghaliyati Novitasari;P;Medan;2012-05-23;Islam;Jl. Jend. Sudirman No. 10;Opung Marbun;Yani Pertiwi, S.Pt;TNI/Polri;Wiraswasta;082233331995;9.2
+3148;0090364324;Budi Wibowo;L;Padang;2009-10-16;Katolik;Komplek Griya Indah Blok A;Tina Jailani;Cut Samiah Rajata, M.Ak;TNI/Polri;Perawat;08782290542;9.2
+3149;0000202252;Gina Riyanti;P;Balikpapan;2010-08-17;Islam;Komplek Griya Indah Blok A;Drs. Caket Napitupulu, S.Gz;Gada Anggriawan, S.H.;Pedagang;Lainnya;0899873397224;8.2
+3150;0050057321;Putri Safitri;P;Cirebon;2010-03-13;Islam;Jl. Asia Afrika;Hj. Halima Prabowo, M.Kom.;Gantar Permadi;Petani;Ibu Rumah Tangga;08535485044;8.2
+3151;0089787490;Mumpuni Uwais;L;Madiun;2009-03-30;Islam;Jl. Teuku Umar;Shania Zulkarnain;Jane Mangunsong;PNS;Wiraswasta;08967728941;9.4
+3152;0038060180;Genta Rahmawati;P;Samarinda;2011-06-17;Budha;Jl. Teuku Umar;Victoria Irawan, M.Pd;T. Artawan Kuswoyo, S.Ked;Nelayan;Pedagang;0823930029047;9.4
+3153;0088969272;Cemani Sihombing;L;Jayapura;2012-05-06;Islam;Jl. Kenanga No. 4;Hj. Vanesa Hastuti;dr. Sadina Sudiati;Karyawan Swasta;Guru;085730102594;7.1
+3154;0005854022;Juli Hastuti;P;Batam;2009-11-09;Islam;Jl. Gejayan;Jarwa Laksmiwati;Adhiarja Susanti;Buruh;Guru;0813583652553;9.4
+3155;0072522857;Zalindra Hassanah;P;Jakarta;2009-12-11;Islam;Jl. Kaliurang km 5;Zelda Prakasa;Umaya Prastuti;Wiraswasta;Guru;087713109058;9.3
+3156;0076645813;Betania Nasyiah;P;Batam;2013-12-21;Islam;Jl. Kaliurang km 5;Tantri Damanik;Carla Permadi, M.M.;Petani;Pedagang;08815204605;7.3
+3157;0093081988;Zalindra Hastuti;P;Solo;2010-01-22;Kristen;Jl. H. Oemar Said;Oskar Damanik;Zulaikha Fujiati;PNS;PNS;082134280155;9.4
+3158;0060027704;Raisa Winarsih;P;Sorong;2012-10-08;Islam;Jl. Veteran;Bakijan Pradipta;Ida Wibowo, S.IP;Buruh;Karyawan Swasta;0815225350387;8.2
+3159;0003729308;Balapati Hutagalung;L;Tarakan;2011-04-15;Islam;Jl. Gejayan;Jais Haryanto;Yulia Sitompul;TNI/Polri;Pedagang;08120688584;9.3
+3160;0057394624;Ina Wulandari;P;Yogyakarta;2009-12-30;Islam;Jl. Braga;Opan Santoso;Tgk. Zelda Agustina;Pedagang;PNS;085688358987;9.1
+3161;0079485939;Arta Uwais;L;Manado;2011-06-26;Islam;Jl. Antasari;Gaduh Pudjiastuti;Jamil Mansur, S.E.I;Guru;Guru;085812040603;7.2
+3162;0062991837;Hasna Pratiwi;P;Palu;2012-07-31;Islam;Jl. Kenanga No. 4;Cornelia Suryatmi;Kairav Yuniar;Buruh;Perawat;085524480388;7.3
+3163;0070045663;Darmaji Firmansyah;L;Samarinda;2009-02-13;Islam;Jl. Imam Bonjol;Ivan Hardiansyah;Tgk. Padma Andriani, M.TI.;PNS;Perawat;082326160154;9.3
+3164;0047005579;Lili Nasyiah;P;Jakarta;2013-05-16;Islam;Jl. Ahmad Yani No. 5;Mila Andriani, M.Kom.;Catur Firmansyah;Karyawan Swasta;Karyawan Swasta;;9.2
+3165;0066747178;Indra Maheswara;L;Palu;2012-05-04;Islam;Jl. Pahlawan;Lili Saputra;Nabila Budiman;Lainnya;Bidan;08997079701;7.1
+3166;0071834421;Virman Sirait;L;Surabaya;2013-12-26;Islam;Jl. Mawar Melati;Sadina Fujiati, S.Gz;Galih Nababan;PNS;Ibu Rumah Tangga;0814728085685;8.2
+3167;0040822014;Yuliana Astuti;P;Tangerang;2013-10-25;Islam;Perumahan Suka Maju No. 12;Uda Lestari;Gambira Kurniawan;Sopir;Ibu Rumah Tangga;0881685554353;7.1
+3168;0044496484;Citra Riyanti;P;Jayapura;2010-03-25;Islam;Jl. Kenanga No. 4;Sutan Cakrajiya Nugroho;Humaira Pradana;Wiraswasta;Lainnya;08237113809;8.3
+3169;0039888807;Lantar Prasetya;L;Solo;2012-09-12;Islam;Jl. Jend. Sudirman No. 10;Zaenab Wahyudin;Karsana Wibowo;Pedagang;Ibu Rumah Tangga;0852390079200;9.4
+3170;0028956661;Wahyu Hidayanto;L;Bogor;2011-02-23;Islam;Jl. Merdeka Barat;Puti Cici Dabukke, S.I.Kom;Dimaz Nababan;Nelayan;Ibu Rumah Tangga;082173808450;8.1
+3171;0013835113;Jessica Laksita;P;Aceh;2013-07-24;Islam;Jl. Urip Sumoharjo;Sutan Sakti Hidayat;Banawi Nasyiah;Pedagang;Lainnya;081643518644;7.3
+3172;0035616969;Ade Yuliarti;P;Tasikmalaya;2012-09-07;Islam;Jl. Mawar Melati;Lanjar Pradipta;Luis Halim;Karyawan Swasta;PNS;081403325393;8.2
+3173;0053135427;Unggul Simanjuntak;L;Samarinda;2011-08-02;Islam;Jl. Ahmad Yani No. 5;Ophelia Wahyudin;H. Koko Prasetyo;Guru;Pedagang;081497311657;9.1
+3174;0055265692;Lili Andriani;P;Banjarmasin;2011-04-14;Islam;Jl. Mawar Melati;Sabri Rahayu;Raden Sihotang, S.Ked;Dokter;Pedagang;089735553627;9.2
+3175;0033006955;Laksana Marpaung;L;Tembilahan;2010-09-30;Kristen;Jl. Mawar Melati;Jayadi Fujiati;Indra Halimah;TNI/Polri;Pedagang;085663928353;8.3
+3176;0088441489;Paramita Anggraini;P;Dumai;2010-02-22;Islam;Jl. Gejayan;Farhunnisa Megantara;Eja Jailani;Buruh;Guru;087793947396;9.4
+3177;0067824240;Yessi Hariyah;P;Singkawang;2009-08-24;Islam;Jl. Jend. Sudirman No. 10;Wirda Sudiati;Wani Zulkarnain;Nelayan;PNS;08215006444;9.4
+3178;0045014531;Kunthara Lazuardi;L;Purwokerto;2013-07-13;Islam;Gang Kelinci No. 3;Lili Laksita, S.Sos;Aurora Hardiansyah;Pedagang;Ibu Rumah Tangga;08988748114;8.2
+3179;0001951639;Gatot Wibisono;L;Kediri;2013-07-01;Islam;Jl. Braga;Caraka Kusmawati;Drs. Usyi Mahendra;Sopir;Bidan;08824846360;8.3
+3180;0006957009;Keisha Laksita;P;Balikpapan;2013-09-26;Islam;Jl. Kartini;Ajeng Pratiwi;Yessi Dongoran;Petani;Perawat;08598982268;9.1
+3181;0096316824;Ajeng Maryati;P;Probolinggo;2013-08-13;Islam;Jl. Pahlawan;drg. Lala Astuti;Calista Lestari;TNI/Polri;PNS;08148756891;7.1
+3182;0094524669;Wasis Permadi;L;Jakarta;2011-06-04;Islam;Jl. Ahmad Yani No. 5;Yuliana Zulkarnain;Drs. Siti Purwanti, M.TI.;Pedagang;Karyawan Swasta;089746322704;7.1
+3183;0059670885;Tirta Santoso;L;Kediri;2010-03-22;Islam;Jl. Sisingamangaraja;Fitria Yolanda, S.Ked;Jarwa Nasyidah, M.TI.;Wiraswasta;Perawat;081965123523;9.3
+3184;0092490110;Siti Nasyidah;P;Probolinggo;2013-09-29;Islam;Jl. Jend. Sudirman No. 10;T. Raharja Firmansyah;Gamani Astuti, S.I.Kom;TNI/Polri;Karyawan Swasta;08158121975;8.3
+3185;0037564844;Gada Widodo;L;Medan;2012-08-26;Islam;Jl. Braga;Kalim Nainggolan;Silvia Mahendra;Buruh;Wiraswasta;0898115607346;7.3
+3186;0028294786;Eluh Pradipta;L;Depok;2009-11-26;Islam;Jl. Setiabudi;Kasiyah Lailasari;Icha Hariyah;Petani;Ibu Rumah Tangga;087771584755;9.3
+3187;0066011238;Edi Habibi;L;Gorontalo;2012-09-14;Islam;Jl. Kaliurang km 5;Cinthia Padmasari;Capa Namaga;Nelayan;Karyawan Swasta;0858431652827;9.3
+3188;0064539570;Hesti Hassanah;P;Jakarta;2010-05-14;Islam;Jl. Diponegoro No. 88;Azalea Mangunsong;Tiara Riyanti;Lainnya;PNS;0877987533766;7.2
+3189;0098164486;Galak Jailani;L;Probolinggo;2009-04-24;Islam;Jl. Imam Bonjol;dr. Baktianto Puspasari, S.Sos;Salwa Narpati, M.M.;Karyawan Swasta;PNS;;9.3
+3190;0012867504;Jarwa Sinaga;L;Kupang;2009-05-04;Islam;Jl. Veteran;Genta Rahayu;Dr. Heryanto Pradana, S.Psi;Nelayan;Ibu Rumah Tangga;088802273605;7.1
+3191;0077640060;Bakiono Simbolon;L;Kupang;2012-12-11;Islam;Jl. Veteran;Dr. Wirda Waluyo;Oni Anggraini;Petani;Karyawan Swasta;085798690132;7.3
+3192;0054573241;Vanesa Suartini;P;Tangerang;2009-12-22;Kristen;Jl. Jend. Sudirman No. 10;Margana Uwais;Sutan Parman Hutasoit, S.I.Kom;Dokter;Pedagang;0855057441317;7.3
+3193;0021638214;Sabar Damanik;L;Kendari;2012-09-01;Islam;Jl. Merdeka Barat;Cut Ciaobella Sihombing;Winda Zulkarnain;Petani;Wiraswasta;0881219000366;8.3
+3194;0023029257;Bakidin Irawan;L;Bandung;2011-10-19;Islam;Jl. Teuku Umar;Cinthia Budiman;Ir. Talia Puspasari, S.Pt;Lainnya;Perawat;0852902388487;9.1
+3195;0031651228;Jayeng Prasetyo;L;Bandung;2010-05-11;Islam;Jl. Urip Sumoharjo;Edison Sinaga;Hamima Rahimah;Pedagang;Ibu Rumah Tangga;081303246019;8.3
+3196;0005024803;Shakila Nasyiah;P;Tegal;2010-11-14;Islam;Jl. Urip Sumoharjo;Karma Widiastuti;Padma Susanti;Nelayan;Karyawan Swasta;08138139420;9.4
+3197;0056971143;Balidin Hutapea;L;Banyuwangi;2013-11-10;Islam;Jl. Imam Bonjol;Ratna Zulaika;Narji Tampubolon;TNI/Polri;Perawat;085964911666;8.3
+3198;0010718657;Prayoga Marpaung;L;Semarang;2012-11-03;Islam;Jl. Diponegoro No. 88;Hj. Rina Padmasari;Mila Novitasari;TNI/Polri;PNS;08773688413;9.4
+3199;0003958993;Dagel Situmorang;L;Gorontalo;2013-09-05;Islam;Jl. Hayam Wuruk;Iriana Pradipta;Paulin Laksita;Buruh;Ibu Rumah Tangga;085687408035;7.1
+3200;0072513395;Soleh Permadi;L;Denpasar;2011-02-13;Islam;Jl. Dago Atas;Lanang Rahmawati, S.T.;Drs. Warsita Ardianto;PNS;Pedagang;0812464139638;9.4
+3201;0046634589;Nadia Nuraini;P;Bandar Lampung;2012-04-23;Islam;Jl. Kaliurang km 5;Latika Setiawan, S.E.;Rahmi Nasyiah;Guru;PNS;0877664596206;7.1
+3202;0032842977;Tira Wastuti;P;Tegal;2009-11-29;Islam;Perumahan Suka Maju No. 12;Ulva Lailasari, S.Gz;Puti Alika Padmasari, M.Farm;Buruh;Wiraswasta;08113094382;7.2
+3203;0021751305;Luwes Nainggolan;L;Kediri;2010-05-18;Islam;Jl. Dago Atas;Dr. Luwar Tarihoran, S.IP;R. Padma Mahendra, M.Pd;Guru;Wiraswasta;08188047135;8.3
+3204;0019611226;Cemeti Sirait;L;Bengkulu;2010-11-04;Islam;Jl. Ahmad Yani No. 5;Suci Laksita;Vivi Mardhiyah;Sopir;PNS;08587868945;9.2
+3205;0004103751;Bakianto Utama;L;Batam;2010-07-25;Islam;Jl. Ahmad Yani No. 5;Puti Amalia Kusmawati;Martani Wijayanti;Buruh;Wiraswasta;0858133182390;9.1
+3206;0099808585;Ani Susanti;P;Banjarmasin;2013-02-05;Islam;Jl. Merdeka Barat;Radit Puspita;Laras Suwarno;Pedagang;Pedagang;0823815439404;8.3
+3207;0068475144;Humaira Riyanti;P;Gorontalo;2011-10-21;Islam;Jl. Braga;R. Victoria Dongoran;Yuliana Lailasari;Lainnya;Wiraswasta;0812251034470;9.1
+3208;0013963464;Mahesa Pratama;L;Tarakan;2009-04-11;Islam;Jl. Teuku Umar;Sutan Setya Saptono, S.Kom;Jati Kusmawati;Pedagang;Perawat;08150925219;8.2
+3209;0088665363;Wakiman Maheswara;L;Malang;2013-03-13;Islam;Jl. Gatot Subroto Kav. 12;Taswir Winarno;Salsabila Maryati;Buruh;Wiraswasta;;7.2
+3210;0052185457;Radika Iswahyudi;L;Tangerang;2009-06-18;Islam;Jl. Urip Sumoharjo;Najam Yolanda;Vanya Prastuti, M.M.;PNS;Perawat;0823726915312;9.2
+3211;0078966797;Adiarja Waluyo;L;Gorontalo;2013-10-04;Islam;Jl. Asia Afrika;R.M. Gantar Thamrin;Drs. Ade Situmorang, S.E.I;Petani;Lainnya;085959287793;7.3
+3212;0021418494;Emas Prayoga;L;Aceh;2010-11-07;Islam;Jl. Diponegoro No. 88;dr. Maryadi Jailani, M.TI.;Emong Mulyani;Karyawan Swasta;Karyawan Swasta;087892091489;8.3
+3213;0061497689;Rusman Thamrin;L;Merauke;2010-05-11;Islam;Jl. Urip Sumoharjo;Edison Wibisono, S.E.I;Oskar Pudjiastuti;Petani;Karyawan Swasta;08585237292;8.2
+3214;0057538579;Mutia Hassanah;P;Palangkaraya;2011-02-14;Islam;Gang Kelinci No. 3;Karimah Purnawati;Dalima Sihotang;TNI/Polri;Perawat;0812575744285;9.2
+3215;0046376963;Dewi Widiastuti;P;Madiun;2012-02-25;Islam;Jl. Urip Sumoharjo;Dt. Saadat Suryatmi, S.Pt;Jarwadi Jailani;Pedagang;Bidan;08968361911;9.3
+3216;0032885498;Fitria Yolanda;P;Semarang;2010-03-09;Islam;Jl. Malioboro;R.A. Zelaya Wacana;Zaenab Lazuardi;Karyawan Swasta;Pedagang;08787224695;7.3
+3217;0073989252;Agnes Anggraini;P;Jambi;2011-04-05;Islam;Jl. Antasari;Wawan Rahmawati, S.H.;Hairyanto Mangunsong;Sopir;Guru;081338749278;7.3
+3218;0024839974;Karman Tampubolon;L;Ambon;2012-10-09;Islam;Jl. Mawar Melati;Siska Wasita;dr. Yance Oktaviani;Nelayan;Pedagang;0898922135123;7.2
+3219;0019716123;Darimin Sinaga;L;Palembang;2009-02-03;Budha;Jl. Dago Atas;Mala Irawan;Puti Puti Situmorang, S.E.I;Buruh;Bidan;081657051022;8.2
+3220;0040000522;Sarah Kusmawati;P;Magelang;2013-05-19;Islam;Jl. Kaliurang km 5;Niyaga Widiastuti;Betania Jailani;Wiraswasta;Bidan;08822959694;7.1
+3221;0019519529;Akarsana Hakim;L;Cirebon;2013-04-05;Islam;Jl. Kenanga No. 4;Jarwa Riyanti;Malika Usamah;Pedagang;Karyawan Swasta;08145641637;7.3
+3222;0059030381;Ghani Sitompul;L;Ambon;2010-11-21;Islam;Jl. Gatot Subroto Kav. 12;drg. Mumpuni Purnawati, S.Psi;Garda Purnawati;Karyawan Swasta;Wiraswasta;081509055793;8.2
+3223;0056913915;Kamila Wahyuni;P;Kendari;2013-09-04;Islam;Jl. Merdeka Barat;Hasna Safitri;Gatot Dabukke, M.TI.;Pedagang;PNS;08181004262;9.3
+3224;0052367476;Cornelia Lailasari;P;Tegal;2009-07-17;Budha;Jl. Jend. Sudirman No. 10;Utama Uyainah;Malika Sitompul;Petani;Wiraswasta;08582268856;7.2
+3225;0009003930;Victoria Kusmawati;P;Gorontalo;2010-02-05;Islam;Jl. Veteran;drg. Abyasa Sihombing;Tirtayasa Hutapea;Karyawan Swasta;Lainnya;;8.2
+3226;0066379621;Ciaobella Handayani;P;Medan;2010-01-20;Islam;Jl. Asia Afrika;Cahya Hutasoit;Qori Widodo;TNI/Polri;Ibu Rumah Tangga;08598495945;9.1
+3227;0034643877;Karimah Anggraini;P;Bandung;2009-10-30;Islam;Jl. Veteran;Ira Nuraini;drg. Eva Permata;Pedagang;Ibu Rumah Tangga;08157455118;8.1
+3228;0086482031;Farhunnisa Susanti;P;Kediri;2011-03-07;Islam;Jl. Setiabudi;Luhung Suryatmi;Tedi Safitri, S.Pd;TNI/Polri;Wiraswasta;;9.4
+3229;0080806853;Jasmin Laksita;P;Jambi;2011-01-23;Islam;Gang Kelinci No. 3;drg. Elvin Yuniar, S.Farm;Ira Hardiansyah;Buruh;Wiraswasta;0858049268828;9.4
+3230;0091448059;Koko Simanjuntak;L;Tarakan;2012-12-26;Islam;Jl. Dago Atas;Malika Astuti;Harjo Gunawan;Lainnya;Karyawan Swasta;08520426817;8.2
+3231;0028026955;Maya Padmasari;P;Magelang;2010-10-05;Budha;Jl. Sisingamangaraja;Cindy Wastuti, S.E.;Harjo Winarno, S.Pt;Buruh;Bidan;081579342282;7.1
+3232;0023621419;Ajeng Kusmawati;P;Kediri;2011-06-01;Islam;Jl. Mawar Melati;Nurul Tampubolon;drg. Rahayu Damanik, S.T.;Guru;PNS;081446299324;9.1
+3233;0068630453;Vicky Wulandari;P;Tasikmalaya;2010-02-13;Kristen;Jl. Gatot Subroto Kav. 12;Kalim Napitupulu;Dr. Ajiman Prasasta;Nelayan;Pedagang;08983256162;9.3
+3234;0015890895;Rusman Prasasta;L;Rengat;2011-08-08;Islam;Jl. Gajah Mada;Bakiadi Hardiansyah;Gangsa Anggraini;Pedagang;Karyawan Swasta;08186539274;8.3
+3235;0043548852;Puti Namaga;P;Solo;2014-01-07;Islam;Jl. Ahmad Yani No. 5;Gilang Puspasari;Kamila Ardianto;PNS;Karyawan Swasta;08788241014;9.4
+3236;0091548941;Darijan Siregar;L;Cirebon;2013-10-14;Islam;Gang Kelinci No. 3;Gamani Nainggolan;Shania Tarihoran;Karyawan Swasta;Guru;0882590952732;9.1
+3237;0014839035;Mila Prastuti;P;Kediri;2009-09-08;Islam;Jl. Braga;dr. Danuja Sinaga, S.E.;Warsita Laksita;Wiraswasta;Lainnya;0819793344600;9.3
+3238;0053509083;Paramita Susanti;P;Bekasi;2010-10-04;Islam;Jl. Kaliurang km 5;Ilyas Suryono;Maida Handayani;Petani;PNS;089664120800;7.1
+3239;0089489155;Elon Pradana;L;Aceh;2013-06-24;Islam;Komplek Griya Indah Blok A;Anita Sirait;R. Titi Sitorus;TNI/Polri;Bidan;0813311987879;7.1
+3240;0036479705;Ajeng Yuniar;P;Makassar;2009-04-16;Islam;Gang Kelinci No. 3;Drs. Daruna Sitorus, M.Farm;Drs. Ifa Salahudin, M.Farm;Petani;Guru;08112197385;7.2
+3241;0006417538;Talia Nurdiyanti;P;Solo;2012-04-03;Budha;Jl. Gatot Subroto Kav. 12;Pardi Pradipta;drg. Lanjar Kuswoyo, S.Pd;Wiraswasta;Perawat;0811873233106;7.1
+3242;0092857255;Harto Narpati;L;Yogyakarta;2012-07-09;Islam;Jl. Ahmad Yani No. 5;Jagapati Latupono, M.Pd;Pangeran Puspasari;Nelayan;PNS;085547976216;9.4
+3243;0085926424;Rina Nasyiah;P;Palu;2009-12-16;Budha;Komplek Griya Indah Blok A;Purwanto Waskita;Anggabaya Aryani, S.Kom;Buruh;Pedagang;0815304165897;9.3
+3244;0090429430;Ajeng Susanti;P;Sorong;2010-06-06;Islam;Jl. Malioboro;Paramita Uwais;Puti Prayoga;Lainnya;Wiraswasta;;8.2
+3245;0090932439;Tania Yolanda;P;Purwokerto;2011-09-01;Islam;Jl. Setiabudi;Puti Kamaria Palastri, M.Kom.;Asirwada Farida, S.Psi;PNS;Ibu Rumah Tangga;08128401557;7.2
+3246;0079119719;Rahmi Kusmawati;P;Tegal;2012-10-02;Islam;Jl. Jend. Sudirman No. 10;Soleh Prastuti;Makara Namaga;Lainnya;Ibu Rumah Tangga;085782084448;9.1
+3247;0080943258;Gina Aryani;P;Medan;2013-02-03;Islam;Jl. Asia Afrika;Johan Permadi;Wasis Pradana, M.Pd;Karyawan Swasta;Lainnya;0852869735669;9.2
+3248;0031156121;Vanesa Safitri;P;Tegal;2012-05-03;Islam;Jl. Antasari;Tgk. Rahmi Mulyani;Puti Kamila Gunarto, M.M.;Lainnya;Perawat;;9.4
+3249;0091823984;Ellis Laksmiwati;P;Merauke;2009-03-27;Islam;Jl. Thamrin;Puti Puput Winarno;Gaman Hakim;PNS;Bidan;088259512037;7.1
+3250;0098105192;Darimin Nashiruddin;L;Tegal;2011-02-01;Islam;Jl. Setiabudi;Hartaka Purwanti, S.E.I;Azalea Puspasari;Wiraswasta;Perawat;0818181224578;7.2
+3251;0080587021;Citra Maryati;P;Balikpapan;2013-09-11;Kristen;Jl. Kartini;Hesti Jailani;Samiah Purnawati;Petani;Pedagang;;9.4
+3252;0013679814;Ade Andriani;P;Magelang;2010-12-12;Islam;Jl. Kaliurang km 5;Garan Simbolon, S.T.;KH. Estiawan Wulandari;Wiraswasta;Perawat;0821639810032;8.2
+3253;0048307981;Gangsa Marpaung;L;Manado;2014-01-22;Islam;Jl. Kenanga No. 4;Prasetyo Hutapea;dr. Usman Kusmawati;Wiraswasta;Karyawan Swasta;081427611088;9.3
+3254;0024178818;Teguh Januar;L;Surabaya;2013-10-15;Islam;Jl. Kartini;Laksana Mansur;Vinsen Dongoran;Dokter;Ibu Rumah Tangga;08826940569;9.4
+3255;0033205043;Argono Ardianto;L;Kendari;2013-10-16;Islam;Jl. H. Oemar Said;Kani Maheswara, M.TI.;Melinda Haryanto;Sopir;Wiraswasta;08131187287;8.1
+3256;0019763540;Tami Padmasari;P;Probolinggo;2011-06-17;Islam;Jl. Asia Afrika;Gandi Saragih;Eko Sirait;Pedagang;Pedagang;;9.2
+3257;0084384350;Yessi Usada;P;Solo;2012-08-13;Islam;Jl. Mawar Melati;Nilam Adriansyah;Cut Tami Napitupulu, S.Ked;PNS;Lainnya;089757555105;7.1
+3258;0021092000;Darmaji Hakim;L;Jambi;2013-09-30;Islam;Jl. Pattimura;Diah Hutasoit;drg. Estiono Yolanda, M.TI.;Sopir;Ibu Rumah Tangga;08144105725;7.3
+3259;0085066280;Yulia Haryanti;P;Bekasi;2012-08-06;Islam;Jl. Antasari;Syahrini Hastuti;Puti Nilam Habibi, S.Psi;TNI/Polri;Ibu Rumah Tangga;088117100010;9.2
+3260;0002852636;Candrakanta Budiyanto;L;Banjarmasin;2010-12-26;Katolik;Jl. Gejayan;Cut Calista Yolanda, M.Farm;Ratih Siregar;Wiraswasta;Karyawan Swasta;0882604512867;9.2
+3261;0063859005;Sakura Kusmawati;P;Cirebon;2011-12-27;Islam;Jl. Merdeka Barat;Fitria Oktaviani;Tgk. Zulfa Saputra;PNS;Pedagang;0899129766192;9.3
+3262;0058937324;Sidiq Damanik;L;Batam;2009-06-14;Islam;Jl. Diponegoro No. 88;dr. Kunthara Marbun, S.Psi;Cinthia Habibi, S.Psi;Wiraswasta;Guru;08212551776;9.3
+3263;0024517279;Gasti Pertiwi;P;Padang;2010-07-10;Islam;Jl. Setiabudi;Puti Carla Halim, S.Ked;drg. Yuliana Pradana, M.Farm;Petani;Karyawan Swasta;;9.3
+3264;0066301338;Dalimin Pradipta;L;Rengat;2009-07-07;Katolik;Gang Kelinci No. 3;Septi Kusumo;Nrima Purwanti;Dokter;Ibu Rumah Tangga;08221892330;7.3
+3265;0054326906;Oni Halimah;P;Kupang;2009-03-01;Islam;Jl. Sisingamangaraja;Vicky Fujiati, S.H.;Sidiq Kusumo;Lainnya;PNS;08995604476;9.3
+3266;0010713656;Jaya Maryadi;L;Banjarmasin;2009-08-05;Islam;Jl. Thamrin;Drs. Winda Halim;Paramita Pradana;PNS;Wiraswasta;081494839992;9.4
+3267;0011185112;Darsirah Adriansyah;L;Probolinggo;2010-07-07;Islam;Jl. Antasari;Cagak Mardhiyah;Capa Ardianto;Dokter;Perawat;08535487044;8.3
+3268;0032783597;Baktiono Gunawan;L;Denpasar;2013-08-18;Islam;Jl. H. Oemar Said;Rahmi Anggraini;Kezia Wacana;Dokter;Wiraswasta;0817333452235;9.1
+3269;0053180022;Jefri Rajata;L;Singkawang;2011-08-16;Islam;Jl. Kenanga No. 4;Elisa Wahyuni;Cut Ade Lazuardi, S.Gz;TNI/Polri;Wiraswasta;08133119553;7.3
+3270;0001056353;Endah Yuliarti;P;Manado;2009-11-03;Islam;Jl. Thamrin;R. Omar Wahyuni, S.E.;Bakti Kuswoyo, S.Psi;Karyawan Swasta;PNS;0898656750892;8.2
+3271;0085836854;Amalia Haryanti;P;Depok;2013-04-19;Islam;Jl. Kaliurang km 5;Jarwa Suryatmi;Puti Zalindra Gunarto, M.Farm;Lainnya;Pedagang;08142161787;8.2
+3272;0076296024;Puput Pudjiastuti;P;Palangkaraya;2009-11-01;Kristen;Jl. Cendrawasih;Karman Mulyani;Ir. Hamima Maryati;Pedagang;Guru;08771832554;7.2
+3273;0041691762;Gamani Hakim;L;Banyuwangi;2012-07-15;Islam;Jl. Malioboro;Tina Hutasoit;Dr. Najam Maryati;TNI/Polri;Karyawan Swasta;0818810759416;9.3
+3274;0000464464;Kezia Mandasari;P;Padang;2010-01-28;Islam;Jl. Thamrin;Marsito Setiawan;Rachel Simbolon;Buruh;Karyawan Swasta;08185014495;8.2
+3275;0013928342;Langgeng Tampubolon;L;Samarinda;2012-08-30;Islam;Jl. Pahlawan;Ir. Farah Permata;Dt. Capa Namaga;Lainnya;Wiraswasta;089874023824;9.2
+3276;0074108545;Balapati Waluyo;L;Tembilahan;2013-09-21;Islam;Jl. Ahmad Yani No. 5;Sutan Cahyo Pradipta;Padma Pranowo;Buruh;Bidan;088847326083;9.4
+3277;0072066645;Jaswadi Pradana;L;Singkawang;2011-12-15;Islam;Jl. Urip Sumoharjo;Drs. Ade Laksmiwati;R. Lala Thamrin;Wiraswasta;Lainnya;085641112294;9.1
+3278;0002861490;Digdaya Siregar;L;Batam;2013-07-18;Islam;Jl. Teuku Umar;Tgk. Galak Hutapea, S.T.;Taufik Prabowo;Buruh;Guru;08816556911;8.2
+3279;0000629075;Dono Pradana;L;Magelang;2011-02-12;Islam;Jl. Pattimura;Ega Simbolon;Edi Utami;Lainnya;Ibu Rumah Tangga;085542316344;8.1
+3280;0075546340;Usman Kusumo;L;Bogor;2010-01-21;Islam;Jl. Hayam Wuruk;Balangga Susanti;Cakrabuana Siregar;Pedagang;Guru;;9.1
+3281;0060475744;Pangeran Pradana;L;Malang;2010-07-17;Islam;Jl. Mawar Melati;Hj. Ghaliyati Hidayanto;Asmadi Sihombing;TNI/Polri;Perawat;082172261655;8.3
+3282;0026274711;Adika Saputra;L;Padang;2011-10-16;Budha;Jl. Kartini;Zulfa Habibi;Cakrawangsa Hartati;Pedagang;Ibu Rumah Tangga;081810643258;9.1
+3283;0042078944;Icha Mulyani;P;Cirebon;2013-02-05;Islam;Jl. Malioboro;Ir. Malika Mandala;Bagus Nainggolan;Lainnya;Ibu Rumah Tangga;08534250523;9.4
+3284;0026491740;Bagas Anggriawan;L;Palu;2013-06-29;Islam;Jl. Kartini;Eva Halim;Margana Saptono, S.Pd;Pedagang;Lainnya;085543321034;8.2
+3285;0077209162;Puji Yuniar;P;Tarakan;2009-06-22;Islam;Jl. Ahmad Yani No. 5;Kamaria Pangestu;Jamalia Saragih;PNS;Lainnya;081710825752;8.3
+3286;0060716883;Uda Prasetyo;L;Yogyakarta;2011-12-16;Islam;Jl. Gejayan;Sakura Firmansyah;Ajiono Nurdiyanti;Nelayan;Bidan;081629376651;7.1
+3287;0053653490;Wirda Puspasari;P;Yogyakarta;2010-09-10;Islam;Jl. Thamrin;Rafid Suryatmi;Cemeti Pertiwi;Wiraswasta;PNS;085207404482;8.1
+3288;0073735435;Winda Melani;P;Depok;2013-07-13;Islam;Jl. Teuku Umar;Laras Lailasari;Baktiono Purnawati;Buruh;Ibu Rumah Tangga;0821651791668;9.1
+3289;0052023576;Najam Pranowo;L;Balikpapan;2009-05-30;Islam;Jl. Pahlawan;Cut Eva Marpaung;Labuh Nasyiah;TNI/Polri;PNS;08787219370;9.4
+3290;0048890468;Hani Andriani;P;Aceh;2013-05-12;Islam;Jl. Kartini;Maya Palastri;Ghaliyati Sihombing;Dokter;Bidan;;7.1
+3291;0031840192;Maman Dongoran;L;Dumai;2009-10-30;Islam;Jl. Asia Afrika;Vicky Budiyanto;R.M. Asirwada Handayani, S.Gz;Nelayan;Ibu Rumah Tangga;082108745123;7.3
+3292;0098124255;Rahman Jailani;L;Padang;2013-10-31;Islam;Jl. Diponegoro No. 88;Ira Pranowo;Banara Kurniawan;Karyawan Swasta;Wiraswasta;08182067227;9.2
+3293;0076644989;Banara Hidayat;L;Denpasar;2012-08-28;Islam;Komplek Griya Indah Blok A;Syahrini Nababan;Dadap Saputra;PNS;Bidan;08986357342;8.1
+3294;0080120897;Tantri Nuraini;P;Depok;2010-03-26;Katolik;Jl. H. Oemar Said;Lala Yuniar;Ghaliyati Usada;Nelayan;Lainnya;08561717907;9.4
+3295;0033051890;Putri Rahmawati;P;Ambon;2012-04-30;Hindu;Jl. Antasari;R. Atma Saefullah;KH. Artawan Fujiati;TNI/Polri;Bidan;0823311417355;8.2
+3296;0021549218;Wira Waskita;L;Bandar Lampung;2009-10-19;Islam;Jl. Pahlawan;Halima Utama, S.E.;Jamalia Widodo;Karyawan Swasta;Wiraswasta;;8.2
+3297;0071548486;Ajeng Astuti;P;Cirebon;2010-02-02;Islam;Jl. Diponegoro No. 88;Dono Sihotang;Ir. Mahfud Usada;Wiraswasta;PNS;08534476838;8.1
+3298;0079509233;Malik Anggriawan;L;Jayapura;2012-12-01;Islam;Jl. Sisingamangaraja;Nalar Waluyo, S.H.;Prima Kusumo;Sopir;Bidan;0856782513237;9.3
+3299;0033146295;Asmuni Santoso;L;Bengkulu;2010-03-28;Islam;Jl. Gejayan;Siti Hariyah, S.Pt;Wawan Nasyidah;Petani;Guru;088855046631;8.2
+3300;0029750592;Rahayu Permata;P;Tasikmalaya;2013-06-30;Kristen;Jl. Braga;Warji Anggraini;Ir. Jumari Natsir;Pedagang;Guru;085912018477;9.2
+3301;0064062252;Gasti Hassanah;P;Rengat;2013-02-14;Islam;Jl. Veteran;Unjani Firmansyah;Gilda Hariyah;Sopir;Wiraswasta;;7.2
+3302;0096790060;Raden Pradana;L;Probolinggo;2010-04-11;Islam;Jl. Dago Atas;Joko Lestari;Makara Yuniar;Guru;Lainnya;0853714171346;7.3
+3303;0029009759;Wani Winarsih;P;Ambon;2013-02-24;Islam;Jl. Antasari;Ratna Irawan, S.Psi;Cakrabirawa Nashiruddin;Guru;Guru;0857661041258;9.3
+3304;0039898200;Diah Rahmawati;P;Kendari;2010-09-02;Islam;Jl. Urip Sumoharjo;Drs. Siska Wibowo, S.E.I;Calista Marpaung, S.E.;PNS;Pedagang;0896886313764;8.1
+3305;0005698321;Lili Oktaviani;P;Palembang;2012-04-17;Islam;Jl. Cendrawasih;Tira Salahudin, S.Ked;Unggul Waskita;Dokter;Perawat;08237397728;9.3
+3306;0091592842;Kasusra Ardianto;L;Ambon;2013-07-18;Islam;Jl. Braga;Drs. Shakila Hassanah, S.E.;Puti Jelita Sitompul, M.Farm;Pedagang;Ibu Rumah Tangga;081396056442;8.1
+3307;0032980183;Indah Pudjiastuti;P;Banjarmasin;2010-09-15;Islam;Jl. Diponegoro No. 88;Irma Pradana;Rahmi Halim;PNS;Guru;081980875577;8.3
+3308;0080879169;Hesti Laksita;P;Kendari;2012-10-03;Islam;Jl. Gatot Subroto Kav. 12;Tgk. Wahyu Mandala;R. Siska Tamba;Dokter;Perawat;0818875727600;8.2
+3309;0001389971;Raisa Uyainah;P;Jambi;2011-04-13;Islam;Perumahan Suka Maju No. 12;Dr. Zalindra Marpaung;R.M. Mulya Saragih, S.IP;Wiraswasta;Bidan;08162514300;7.2
+3310;0049042276;Manah Firmansyah;L;Jambi;2009-06-22;Islam;Jl. H. Oemar Said;Endra Kusumo;Wisnu Pangestu;Lainnya;Pedagang;0815779478959;8.3
+3311;0064307784;Kayun Irawan;L;Cirebon;2010-10-01;Islam;Komplek Griya Indah Blok A;Hasan Sitorus;Rudi Mangunsong;Nelayan;Karyawan Swasta;088282433614;9.3
+3312;0086154801;Eva Wulandari;P;Makassar;2009-03-10;Katolik;Jl. Sisingamangaraja;Drs. Cahyanto Narpati;Titin Sitompul;Sopir;PNS;0819131324899;7.3
+3313;0086413882;Alika Riyanti;P;Cirebon;2010-04-17;Budha;Jl. Asia Afrika;Endah Pradipta;Karsana Megantara;Buruh;Karyawan Swasta;08149517223;8.3
+3314;0094261715;Lidya Wulandari;P;Gorontalo;2011-09-24;Islam;Jl. Kaliurang km 5;Tgk. Diana Ardianto;R. Fathonah Anggriawan, S.Psi;Petani;Perawat;085744342597;9.1
+3315;0098339433;Elma Yuliarti;P;Pontianak;2013-12-22;Kristen;Jl. Setiabudi;Hj. Ilsa Halimah;Amalia Putra, S.H.;Buruh;Pedagang;088297325658;8.1
+3316;0026190089;Nabila Nasyiah;P;Tasikmalaya;2009-11-14;Kristen;Jl. Gejayan;Bancar Pangestu;Tira Utama;Buruh;Wiraswasta;08141864256;7.3
+3317;0097674883;Kuncara Prasasta;L;Ambon;2010-06-06;Kristen;Jl. Imam Bonjol;Cager Anggraini;Ibrani Wacana;TNI/Polri;Bidan;0816642424181;9.1
+3318;0039764579;Lili Sudiati;P;Depok;2011-08-10;Islam;Jl. H. Oemar Said;Drs. Adiarja Mustofa, S.Ked;R.M. Naradi Utama;Lainnya;Lainnya;;7.2
+3319;0070083894;Pranawa Suwarno;L;Sorong;2009-09-08;Islam;Jl. Malioboro;Cakrawangsa Maheswara;Keisha Kurniawan;Sopir;PNS;082266107430;7.3
+3320;0099111822;Tirtayasa Manullang;L;Bandar Lampung;2010-05-17;Islam;Jl. Diponegoro No. 88;Vanesa Gunarto;Ega Habibi;Petani;Bidan;08227957615;9.3
+3321;0047803495;Erik Kuswoyo;L;Medan;2013-07-18;Katolik;Jl. Braga;Gawati Pratiwi, M.Kom.;Tgk. Ira Sinaga;PNS;Lainnya;0896084398870;9.2
+3322;0094270432;Wardaya Utama;L;Palu;2013-12-22;Islam;Jl. Mawar Melati;Hasna Hartati;Eja Saragih;Guru;Guru;0881231495307;9.2
+3323;0083904834;Jindra Mustofa;L;Tembilahan;2011-10-03;Islam;Perumahan Suka Maju No. 12;Siska Kurniawan;Sari Prasetya, S.IP;Wiraswasta;Perawat;08216655301;8.1
+3324;0029583491;Karma Dabukke;L;Jambi;2012-04-04;Islam;Jl. Pahlawan;Dariati Saragih, S.Sos;Tari Natsir;Dokter;Ibu Rumah Tangga;088809541318;9.2
+3325;0065328374;Luwar Siregar;L;Bandung;2010-04-12;Budha;Jl. Setiabudi;Rahmat Mandasari, M.Ak;Rina Mayasari;PNS;PNS;08134872263;9.2
+3326;0058227347;Leo Megantara;L;Rengat;2011-02-20;Katolik;Jl. Merdeka Barat;Hj. Michelle Hutapea;drg. Cahyadi Hakim, S.Psi;Dokter;PNS;081832736778;7.1
+3327;0023769299;Dacin Sihombing;L;Mataram;2013-10-14;Islam;Jl. Teuku Umar;Ellis Mahendra;Nadine Haryanto;Petani;Perawat;08525641093;9.1
+3328;0057761552;Satya Rajasa;L;Singkawang;2011-09-29;Islam;Jl. Urip Sumoharjo;Rangga Samosir;Oni Nashiruddin;Lainnya;Pedagang;0896708692737;9.4
+3329;0051910062;Fathonah Oktaviani;P;Banjarmasin;2011-01-18;Islam;Jl. Thamrin;Garda Simbolon, M.Pd;Hilda Prastuti;Sopir;Bidan;0852150866724;8.1
+3330;0058200019;Bakiono Pangestu;L;Tegal;2013-09-21;Islam;Jl. Thamrin;Ir. Irma Narpati, S.Farm;Dt. Satya Hariyah, S.Ked;PNS;PNS;087829936391;9.2
+3331;0062796142;Kadir Latupono;L;Bandung;2012-01-14;Islam;Jl. Kaliurang km 5;Ega Budiyanto;Yance Hariyah, S.T.;Buruh;PNS;081642743632;9.1
+3332;0068098063;Kayun Waluyo;L;Balikpapan;2011-07-11;Islam;Jl. Antasari;Respati Rajasa;Ajeng Agustina;Petani;Lainnya;08965439941;8.3
+3333;0089302520;Luwes Suwarno;L;Denpasar;2013-06-08;Kristen;Jl. Teuku Umar;Mitra Mangunsong;Paris Saragih, S.E.;Nelayan;Wiraswasta;08137538478;7.1
+3334;0058885091;Almira Mayasari;P;Kendari;2009-07-09;Islam;Jl. Sisingamangaraja;Yani Nainggolan;Raharja Pradana, M.M.;Karyawan Swasta;Perawat;;7.3
+3335;0038456251;Tania Nurdiyanti;P;Kupang;2012-09-22;Islam;Jl. Merdeka Barat;Winda Tarihoran;Zamira Lestari;Sopir;Karyawan Swasta;0856776875286;8.2
+3336;0055311847;Kemal Wasita;L;Merauke;2010-11-23;Islam;Jl. Asia Afrika;Dr. Silvia Haryanto;Respati Purwanti;Petani;PNS;085985009988;7.1
+3337;0073587313;Dalimin Hutagalung;L;Madiun;2009-11-20;Katolik;Jl. Kenanga No. 4;Rafi Wasita;Syahrini Aryani;PNS;Lainnya;08218587590;9.4
+3338;0080447160;Unggul Waluyo;L;Surabaya;2013-04-01;Islam;Jl. Mawar Melati;Indah Agustina, M.Kom.;Marwata Pudjiastuti;Buruh;Bidan;08770188086;8.1
+3339;0028678780;Hendri Samosir;L;Cirebon;2013-05-12;Islam;Jl. Imam Bonjol;Humaira Halimah;Iriana Maryadi;Sopir;Ibu Rumah Tangga;08557845983;8.2
+3340;0066931826;Taswir Napitupulu;L;Padang;2010-08-26;Islam;Jl. Teuku Umar;Rama Andriani;Alambana Waluyo;Guru;Guru;08225039994;9.2
+3341;0085630614;Abyasa Kurniawan;L;Manado;2013-10-26;Islam;Jl. Hayam Wuruk;T. Kemba Tarihoran;drg. Kamila Mangunsong;PNS;Perawat;0877225562107;8.2
+3342;0013059992;Belinda Wastuti;P;Singkawang;2012-11-14;Islam;Komplek Griya Indah Blok A;Arsipatra Saptono;R.A. Novi Hasanah, S.Farm;Sopir;Pedagang;08536463718;9.1
+3343;0079361054;Siti Zulaika;P;Palembang;2009-02-07;Islam;Jl. Kartini;Syahrini Yuliarti;Drs. Cakrawala Usada, S.Sos;Buruh;Bidan;089656216112;7.1
+3344;0023198638;Bakiman Utama;L;Purwokerto;2011-03-30;Islam;Jl. Veteran;Legawa Mardhiyah;Maria Prasasta;Wiraswasta;Wiraswasta;08141460893;8.3
+3345;0063472073;Mahesa Putra;L;Sorong;2012-06-21;Islam;Jl. Hayam Wuruk;Tania Handayani;Samiah Irawan;TNI/Polri;Lainnya;08573396128;9.2
+3346;0042346536;Laswi Situmorang;L;Jayapura;2013-01-11;Islam;Jl. Ahmad Yani No. 5;Endah Safitri;Panca Wibisono;Wiraswasta;PNS;0852925210133;7.2
+3347;0010135851;Zulfa Fujiati;P;Bengkulu;2011-08-28;Islam;Jl. Veteran;Eka Permata;Puput Kusumo;Wiraswasta;Ibu Rumah Tangga;0811123537973;7.2
+3348;0016977400;Caraka Irawan;L;Kupang;2011-11-01;Kristen;Jl. Gatot Subroto Kav. 12;Cakrabirawa Siregar;Farah Haryanti;Karyawan Swasta;Lainnya;;7.2
+3349;0091468937;Cici Hassanah;P;Jakarta;2010-02-18;Islam;Jl. Gatot Subroto Kav. 12;Dr. Dimaz Permata, S.Kom;Paris Lestari;Wiraswasta;Wiraswasta;0881850009434;8.2
+3350;0020668614;Queen Mulyani;P;Magelang;2012-05-12;Kristen;Jl. Antasari;H. Gandi Mulyani, S.Farm;T. Jatmiko Hutasoit, S.I.Kom;TNI/Polri;Guru;088219867113;8.3
+3351;0024062954;Gatra Marpaung;L;Bogor;2009-05-16;Islam;Gang Kelinci No. 3;Gandi Wibisono;drg. Wirda Prayoga, S.Kom;Guru;Wiraswasta;08528462730;8.3
+3352;0036791920;Lintang Laksita;P;Tangerang;2011-04-20;Islam;Jl. H. Oemar Said;Laswi Megantara;Icha Wasita;Guru;Karyawan Swasta;0852211873823;8.2
+3353;0032042296;Gamblang Simanjuntak;L;Solo;2013-09-02;Islam;Jl. Kenanga No. 4;Laswi Wahyudin;Dr. Marsudi Prasetyo, S.Psi;Nelayan;Bidan;082178896988;7.3
+3354;0069834834;Opung Pradana;L;Jambi;2010-12-11;Islam;Jl. Jend. Sudirman No. 10;Drs. Lanjar Narpati;Zalindra Rahmawati, S.T.;PNS;PNS;089633380616;9.1
+3355;0008183669;Melinda Palastri;P;Denpasar;2010-11-17;Islam;Jl. Urip Sumoharjo;Betania Saragih, S.I.Kom;Atmaja Andriani;Petani;PNS;08576016594;7.1
+3356;0039967589;Lembah Wibowo;L;Palu;2010-12-11;Islam;Jl. Gejayan;Utama Gunarto, M.Kom.;R.M. Baktiadi Anggriawan;TNI/Polri;Ibu Rumah Tangga;08968314136;9.1
+3357;0024122151;Endra Rajasa;L;Solo;2012-11-03;Islam;Jl. Thamrin;Zelda Riyanti, S.Farm;Ina Lailasari;Karyawan Swasta;Bidan;08567138524;8.3
+3358;0093052005;Kayla Mardhiyah;P;Tarakan;2009-02-03;Islam;Jl. H. Oemar Said;Cemani Dongoran;Rahayu Sihombing;PNS;Pedagang;0819686019719;7.2
+3359;0075651426;Ikin Prasasta;L;Rengat;2013-03-04;Islam;Jl. H. Oemar Said;Rangga Dongoran;Patricia Tarihoran;Lainnya;Pedagang;0819219979646;9.2
+3360;0002853121;Kemal Nababan;L;Samarinda;2009-08-23;Islam;Jl. Thamrin;Kamaria Samosir;Tgk. Maimunah Prasetyo, S.T.;TNI/Polri;Guru;0882406380207;7.3
+3361;0097970954;Xanana Maulana;L;Purwokerto;2013-03-20;Islam;Jl. Jend. Sudirman No. 10;Tgk. Lidya Napitupulu, S.Psi;Sutan Baktiono Puspita, S.Psi;Petani;Wiraswasta;0815635083479;8.2
+3362;0020448729;Gaman Mustofa;L;Rengat;2012-05-30;Islam;Jl. Kenanga No. 4;Dodo Uwais;Dr. Bakidin Nasyiah;Lainnya;Bidan;08144507674;8.1
+3363;0066051287;Ajimin Saptono;L;Yogyakarta;2012-11-09;Islam;Jl. Pattimura;Danuja Wijaya;R. Mursinin Waskita;Karyawan Swasta;PNS;087800711373;9.1
+3364;0015255487;Adikara Mustofa;L;Yogyakarta;2012-11-26;Islam;Jl. Imam Bonjol;Drs. Bala Januar;Asirwada Wijaya;Lainnya;Karyawan Swasta;0819778233993;7.3
+3365;0065526693;Harjaya Adriansyah;L;Cirebon;2012-11-19;Islam;Jl. Diponegoro No. 88;Dina Sitorus;Bagya Suwarno;Petani;Guru;082147478890;8.1
+3366;0091251275;Jamil Damanik;L;Aceh;2009-04-26;Islam;Jl. Jend. Sudirman No. 10;Drs. Tirta Lazuardi, M.M.;Tgk. Rika Setiawan, S.Ked;Pedagang;Perawat;08235935802;9.3
+3367;0050752546;Michelle Mandasari;P;Cirebon;2013-03-29;Islam;Jl. Antasari;Hari Sirait;Gangsar Marpaung;Nelayan;Guru;08883399014;7.1
+3368;0045664116;Kawaca Wijaya;L;Solo;2010-07-30;Islam;Jl. Pattimura;Ir. Talia Purwanti;KH. Edi Sudiati, S.E.I;TNI/Polri;Lainnya;085235783611;9.1
+3369;0074107660;Qori Handayani;P;Balikpapan;2011-02-24;Islam;Jl. Braga;Sakura Jailani, M.TI.;Chelsea Halimah;Petani;Guru;08170274569;7.2
+3370;0051005613;Tiara Agustina;P;Denpasar;2010-10-24;Islam;Jl. Antasari;Dr. Jumari Riyanti, M.Kom.;dr. Elisa Namaga, S.Pt;Wiraswasta;Lainnya;081507782431;8.2
+3371;0014236042;Luis Tampubolon;L;Cirebon;2009-08-31;Islam;Jl. Kaliurang km 5;Puti Zalindra Gunawan, M.Kom.;Dr. Tari Laksmiwati, S.E.I;Karyawan Swasta;PNS;0882872205981;9.4
+3372;0064317518;Zulfa Oktaviani;P;Magelang;2013-03-25;Islam;Jl. Malioboro;Eva Mayasari;Karma Hartati;Petani;Pedagang;08810781773;7.1
+3373;0099729772;Darmaji Putra;L;Banyuwangi;2011-12-27;Islam;Jl. Setiabudi;Drs. Juli Hariyah;Labuh Hartati;Nelayan;Lainnya;0817674202062;7.1
+3374;0068236919;Embuh Siregar;L;Balikpapan;2013-02-15;Islam;Jl. Kenanga No. 4;Ophelia Lazuardi;Latika Anggraini, S.Pt;Guru;Wiraswasta;089846535521;7.2
+3375;0012077751;Ajiman Mansur;L;Rengat;2013-03-16;Islam;Jl. Hayam Wuruk;Lili Hutasoit;Betania Suwarno, S.T.;Lainnya;Ibu Rumah Tangga;08772265180;9.1
+3376;0051477251;Ratih Novitasari;P;Yogyakarta;2011-01-07;Islam;Jl. Cendrawasih;R. Unjani Permata, M.M.;Eli Rahimah;Pedagang;Guru;08826693051;9.4
+3377;0038877821;Harsaya Siregar;L;Sorong;2013-11-14;Islam;Jl. Kaliurang km 5;Balijan Pradana;Prayitna Anggraini;Petani;Lainnya;08967211703;9.3
+3378;0052683559;Jumadi Nainggolan;L;Probolinggo;2011-03-04;Islam;Jl. Ahmad Yani No. 5;Asirwanda Laksmiwati;Cayadi Damanik;TNI/Polri;Ibu Rumah Tangga;0859331505425;9.1
+3379;0099448114;Langgeng Hardiansyah;L;Kediri;2011-11-03;Islam;Jl. Malioboro;Garda Januar, S.Gz;Cut Ifa Sihombing, S.I.Kom;Guru;Guru;081234294704;9.3
+3380;0077852523;Patricia Laksita;P;Bekasi;2013-10-13;Islam;Jl. Pattimura;Kanda Wibisono, S.H.;R. Ghaliyati Yulianti;Wiraswasta;Lainnya;;7.2
+3381;0002049752;Edward Wibowo;L;Batam;2011-01-22;Kristen;Jl. Gejayan;Dono Kusumo;Victoria Adriansyah;Petani;Perawat;085767962752;8.3
+3382;0090448091;Tari Rahmawati;P;Depok;2013-02-19;Islam;Jl. Merdeka Barat;Sutan Adiarja Wacana;H. Soleh Samosir;Sopir;Lainnya;;7.3
+3383;0096874874;Ulya Rahayu;P;Manado;2009-05-31;Islam;Jl. Antasari;Purwanto Budiyanto;Bahuwirya Hutagalung;Petani;Pedagang;0853316481679;9.1
+3384;0014343368;Karma Latupono;L;Makassar;2011-04-01;Budha;Jl. Malioboro;Aurora Purnawati;Farhunnisa Jailani;Wiraswasta;PNS;0822278734185;9.3
+3385;0044909954;Kani Andriani;P;Bekasi;2010-02-06;Islam;Jl. Gejayan;Hari Halim;drg. Zizi Zulaika;PNS;Bidan;089894402128;9.3
+3386;0092491754;Mujur Waskita;L;Balikpapan;2012-12-21;Katolik;Jl. Braga;Reksa Wacana;Paris Hutasoit;Dokter;Wiraswasta;08166832917;7.1
+3387;0055020327;Yunita Wahyuni;P;Tembilahan;2011-01-20;Islam;Jl. Cendrawasih;dr. Tasdik Hutasoit, S.Kom;Kezia Hardiansyah;Lainnya;Wiraswasta;08985551977;9.2
+3388;0044311838;Syahrini Laksita;P;Rengat;2011-03-13;Islam;Jl. Pattimura;Teddy Saputra;Natalia Irawan;TNI/Polri;Bidan;08983761914;9.2
+3389;0056870372;Jamalia Rahimah;P;Probolinggo;2010-10-27;Hindu;Jl. Diponegoro No. 88;Paramita Uwais;Ir. Tami Hutagalung, M.TI.;Buruh;Ibu Rumah Tangga;089887018663;7.2
+3390;0088807496;Dewi Puspita;P;Palembang;2013-04-07;Islam;Jl. Urip Sumoharjo;Mustofa Purwanti;Satya Aryani;Petani;PNS;08819133758;9.2
+3391;0034178075;Gamblang Dabukke;L;Bandung;2012-07-02;Islam;Jl. Teuku Umar;Liman Handayani;Ganda Hariyah;Karyawan Swasta;Guru;08962067534;9.1
+3392;0082943454;Maya Sudiati;P;Jayapura;2012-08-01;Islam;Jl. Malioboro;Edward Prasasta;Tgk. Mustofa Purnawati, S.Sos;Nelayan;Bidan;0898630366629;8.1
+3393;0081122561;Unjani Lailasari;P;Manado;2009-08-22;Islam;Gang Kelinci No. 3;Iriana Astuti;Setya Haryanto, S.Pd;Buruh;PNS;08992271981;9.2
+3394;0008876338;Kacung Saptono;L;Bekasi;2009-08-27;Islam;Jl. Antasari;R.A. Eka Putra, S.T.;Salsabila Mulyani;Sopir;Lainnya;0811543119056;9.3
+3395;0029158534;Ibrani Budiyanto;L;Batam;2012-01-16;Islam;Jl. Imam Bonjol;Puti Sarah Firmansyah, M.Farm;Drs. Lukman Budiyanto, S.Farm;Petani;Wiraswasta;08122357855;9.1
+3396;0011920079;Karja Saragih;L;Kendari;2010-02-06;Islam;Jl. Mawar Melati;Drs. Unjani Pratiwi, S.Psi;KH. Satya Agustina;Lainnya;Guru;0896787306616;7.1
+3397;0062787460;Aisyah Rahimah;P;Denpasar;2012-05-14;Kristen;Jl. Pahlawan;Dariati Halimah, S.IP;Tania Anggraini, S.Gz;Petani;Bidan;0853329214547;8.3
+3398;0021627992;Sadina Purnawati;P;Banjarmasin;2009-12-22;Kristen;Jl. Antasari;Drs. Ulya Wacana;Raina Anggraini;Wiraswasta;Ibu Rumah Tangga;085852006453;7.1
+3399;0017307434;Julia Puspita;P;Tarakan;2011-11-14;Islam;Jl. Jend. Sudirman No. 10;Yuni Ardianto;Jayadi Tampubolon;Lainnya;Lainnya;085974542064;7.3
+3400;0080742265;Mursinin Simanjuntak;L;Probolinggo;2012-01-14;Islam;Jl. Jend. Sudirman No. 10;Drs. Ghani Lestari;Victoria Irawan;Dokter;Perawat;;9.4
+3401;0004031915;Cengkal Natsir;L;Pekanbaru;2012-01-02;Islam;Jl. Jend. Sudirman No. 10;Hj. Violet Saptono;Widya Winarsih;Wiraswasta;Bidan;08120235510;7.1
+3402;0048998336;Dina Novitasari;P;Kediri;2011-02-08;Islam;Jl. Pahlawan;Kadir Saefullah;Yuliana Yuniar;Buruh;Karyawan Swasta;081419525142;9.4
+3403;0050381052;Cakrawala Saptono;L;Surabaya;2012-03-29;Islam;Jl. Veteran;drg. Puti Wibisono, S.Psi;Shakila Damanik;Lainnya;Lainnya;088294173094;8.1
+3404;0027979236;Dewi Hastuti;P;Palu;2009-03-19;Budha;Jl. Thamrin;Ajeng Simbolon;Gina Wibisono, S.Pd;Sopir;Perawat;08113872850;9.3
+3405;0083843887;Calista Riyanti;P;Probolinggo;2012-02-08;Islam;Jl. Teuku Umar;Oliva Yuniar;Almira Agustina;Lainnya;Bidan;0814796010067;7.3
+3406;0030672712;Sari Rahimah;P;Tangerang;2011-01-30;Islam;Jl. Kaliurang km 5;Salwa Usada;Febi Santoso;Sopir;Karyawan Swasta;0856571095716;9.4
+3407;0023825214;Tiara Wastuti;P;Rengat;2011-10-07;Islam;Jl. Teuku Umar;Elisa Nababan;Tgk. Laras Siregar, M.Kom.;Karyawan Swasta;Wiraswasta;087809388785;9.1
+3408;0010059048;Elon Prasasta;L;Tangerang;2012-06-18;Islam;Jl. Thamrin;Utama Latupono;Karsa Handayani;Petani;Pedagang;089677945397;9.4
+3409;0071222433;Winda Winarsih;P;Pekanbaru;2011-03-28;Islam;Jl. Gajah Mada;Tira Pratiwi;Taswir Prasasta;Petani;Pedagang;0898151152294;7.3
+3410;0057561306;Jumari Samosir;L;Pekanbaru;2011-12-01;Islam;Jl. Thamrin;Danang Nuraini;R.A. Hafshah Mustofa;Karyawan Swasta;Pedagang;0857243434550;9.3
+3411;0077181788;Ratna Novitasari;P;Banyuwangi;2011-07-26;Islam;Jl. Asia Afrika;Gabriella Suryatmi, S.E.;Fitriani Fujiati;TNI/Polri;PNS;0857613094502;8.2
+3412;0050622919;Rangga Hakim;L;Palangkaraya;2011-11-23;Islam;Jl. Dago Atas;Uchita Uyainah;Damar Fujiati;Guru;Perawat;0822853829499;7.3
+3413;0015513265;Hasna Maryati;P;Gorontalo;2011-06-28;Islam;Jl. Setiabudi;Ir. Cornelia Pradana, S.H.;drg. Shania Lestari, S.Kom;Dokter;Ibu Rumah Tangga;08818734994;8.3
+3414;0094719884;Almira Oktaviani;P;Jambi;2010-10-04;Islam;Jl. Gatot Subroto Kav. 12;Dt. Bakiadi Hasanah;Dimas Tamba;Karyawan Swasta;Ibu Rumah Tangga;081591895886;7.1
+3415;0093513047;Gaiman Budiyanto;L;Ambon;2011-02-19;Islam;Jl. Hayam Wuruk;Drs. Oni Saragih, S.Gz;Ayu Wastuti;Wiraswasta;PNS;081652551805;8.2
+3416;0037305608;Cakrabirawa Mangunsong;L;Gorontalo;2013-05-02;Islam;Jl. Sisingamangaraja;drg. Laila Palastri;Kartika Sudiati;Wiraswasta;PNS;08126828752;8.1
+3417;0014882186;Atmaja Jailani;L;Mataram;2011-01-11;Katolik;Jl. Hayam Wuruk;Daliman Sihotang;Nadia Firmansyah;Lainnya;Guru;0812325658359;7.3
+3418;0095807800;Mujur Pratama;L;Bandung;2012-10-21;Islam;Jl. Mawar Melati;Jais Uwais;Laila Prasetyo;Guru;Karyawan Swasta;08583469505;8.2
+3419;0020688732;Jaeman Ardianto;L;Palangkaraya;2013-04-22;Budha;Jl. H. Oemar Said;Dadap Gunarto;Dr. Aurora Thamrin;Karyawan Swasta;Lainnya;0811921132184;9.3
+3420;0045636460;Hasta Maryadi;L;Banyuwangi;2010-01-26;Islam;Jl. Urip Sumoharjo;Najwa Jailani, S.Kom;Mila Sihombing, M.Ak;TNI/Polri;Ibu Rumah Tangga;0855577222493;9.1
+3421;0071159691;Safina Hariyah;P;Medan;2012-12-31;Islam;Jl. Kenanga No. 4;Tira Prayoga, M.TI.;Danu Nainggolan, S.I.Kom;TNI/Polri;Lainnya;08117790579;7.3
+3422;0071450139;Galuh Sihotang;L;Gorontalo;2010-11-21;Budha;Jl. Kenanga No. 4;Oliva Firgantoro;Galak Riyanti;Petani;Bidan;085906170517;8.3
+3423;0020633563;Narji Mansur;L;Pontianak;2012-10-10;Islam;Jl. Pattimura;Karimah Hastuti, S.Kom;drg. Aisyah Padmasari;Pedagang;Bidan;0823189729705;9.1
+3424;0085453544;Harjasa Pangestu;L;Purwokerto;2013-11-15;Islam;Jl. Jend. Sudirman No. 10;Salsabila Kurniawan;Jessica Laksita;Lainnya;Guru;08228718938;7.3
+3425;0042894448;Ghaliyati Hartati;P;Bengkulu;2012-12-01;Islam;Jl. Kaliurang km 5;Dr. Yosef Mangunsong;Sutan Marwata Hakim, S.IP;Nelayan;Perawat;08777088254;7.1
+3426;0071494112;Paris Kuswandari;P;Samarinda;2012-04-07;Islam;Jl. Merdeka Barat;Ganda Fujiati;Irfan Purwanti, S.Kom;Guru;Bidan;081353277321;7.3
+3427;0028213872;Syahrini Permata;P;Depok;2011-02-26;Islam;Jl. Jend. Sudirman No. 10;Umar Zulkarnain;Carla Pertiwi, M.M.;Lainnya;Ibu Rumah Tangga;081957798213;9.2
+3428;0049820225;Karsana Nashiruddin;L;Singkawang;2013-02-22;Islam;Jl. Setiabudi;Yosef Situmorang;Padmi Sihombing;Pedagang;Pedagang;088840264309;8.2
+3429;0038241407;Balamantri Wibowo;L;Tasikmalaya;2011-10-12;Islam;Jl. Gatot Subroto Kav. 12;Raina Kusmawati, S.E.I;Mitra Tamba, S.Psi;Buruh;Pedagang;;9.3
+3430;0092524435;Karman Hidayat;L;Pekanbaru;2011-05-25;Islam;Jl. Hayam Wuruk;R.M. Hari Santoso;Opung Pratama;PNS;Pedagang;081151130393;8.3
+3431;0062051903;Among Hardiansyah;L;Balikpapan;2011-12-13;Islam;Jl. Jend. Sudirman No. 10;Tami Damanik;Uli Nasyiah;PNS;Pedagang;;8.1
+3432;0097535425;Karta Hidayanto;L;Mataram;2011-01-02;Islam;Jl. Pattimura;Ilyas Uwais;Puput Sirait;TNI/Polri;Ibu Rumah Tangga;089700973838;8.3
+3433;0056338025;Najam Waluyo;L;Merauke;2013-02-10;Islam;Jl. Kenanga No. 4;Dr. Kasiran Yolanda;Nadia Pudjiastuti;Guru;Wiraswasta;0811253743672;8.1
+3434;0062407464;Pandu Pradipta;L;Padang;2011-09-07;Islam;Jl. Teuku Umar;Samiah Setiawan, M.Farm;Sutan Jono Firmansyah;Nelayan;Perawat;0877026644107;9.4
+3435;0025265815;Jane Nuraini;P;Padang;2013-06-06;Islam;Jl. Malioboro;Nabila Manullang;Eli Pangestu;Petani;Wiraswasta;0896454192483;8.2
+3436;0032237566;Mustika Sihombing;L;Magelang;2012-04-21;Islam;Jl. Malioboro;Kenes Wahyudin;Drs. Kambali Sitompul, S.Pt;Buruh;Karyawan Swasta;0853209393422;9.4
+3437;0076699612;Gasti Puspita;P;Rengat;2010-01-15;Islam;Jl. Gejayan;Ika Hutasoit;Salimah Aryani;Dokter;Lainnya;0855397307251;8.3
+3438;0016772398;Malika Kuswandari;P;Manado;2012-12-12;Islam;Jl. Urip Sumoharjo;Tgk. Emil Rahayu;Iriana Rahimah;Karyawan Swasta;Pedagang;088839320954;8.2
+3439;0028573198;Cagak Suwarno;L;Balikpapan;2011-12-01;Islam;Jl. Imam Bonjol;Tira Mayasari;Cut Keisha Saptono;Dokter;Wiraswasta;0859850743623;8.1
+3440;0098032073;Panji Iswahyudi;L;Tangerang;2009-08-07;Islam;Jl. Sisingamangaraja;T. Okto Mangunsong, M.Kom.;Tasnim Suartini;TNI/Polri;PNS;089863924792;8.1
+3441;0041185079;Nalar Saefullah;L;Bandung;2012-01-05;Islam;Jl. Imam Bonjol;Widya Rahimah;R.A. Aurora Manullang;Petani;Pedagang;082240356313;9.1
+3442;0083104547;Utama Tarihoran;L;Madiun;2011-11-14;Islam;Jl. Kenanga No. 4;R.M. Drajat Prasetya;dr. Jaga Winarno, M.Farm;Lainnya;Pedagang;088898457418;8.1
+3443;0059369319;Jaeman Zulkarnain;L;Tegal;2011-02-21;Islam;Jl. Dago Atas;Raden Waluyo, S.E.;Warsa Kurniawan, S.E.I;Sopir;Pedagang;082141129710;7.1
+3444;0073236843;Titi Wijayanti;P;Malang;2009-09-22;Budha;Komplek Griya Indah Blok A;Drs. Lili Puspasari;Sakura Tampubolon, M.Pd;PNS;Karyawan Swasta;089823728230;8.2
+3445;0085925511;Harimurti Anggriawan;L;Rengat;2013-04-12;Islam;Jl. Urip Sumoharjo;dr. Kamidin Irawan, M.M.;Elma Rajata;Petani;Lainnya;085726943570;7.3
+3446;0082891469;Hasim Lazuardi;L;Tangerang;2012-09-29;Islam;Jl. Imam Bonjol;Puti Yessi Hakim, S.Psi;Banawa Riyanti;Pedagang;Bidan;08134688589;8.1
+3447;0062599098;Luis Siregar;L;Jayapura;2010-05-22;Islam;Jl. Gatot Subroto Kav. 12;Salwa Lestari;Manah Kusmawati;Nelayan;PNS;0899411856458;7.3
+3448;0083533180;Danu Sirait;L;Bengkulu;2009-10-14;Islam;Jl. Malioboro;Gantar Uwais;Drs. Diah Lailasari;TNI/Polri;Lainnya;08778764477;9.4
+3449;0025932241;Langgeng Nashiruddin;L;Surabaya;2011-08-09;Katolik;Jl. Asia Afrika;Queen Suryatmi;Gamanto Zulaika, M.Kom.;Wiraswasta;Karyawan Swasta;089997688511;9.2
+3450;0046242301;Rahman Sihombing;L;Sorong;2011-07-14;Islam;Jl. Imam Bonjol;Puti Maya Wijaya;Adikara Marbun;Karyawan Swasta;Ibu Rumah Tangga;08784492043;9.1
+3451;0051160090;Jindra Utama;L;Singkawang;2012-12-19;Islam;Jl. Urip Sumoharjo;Hj. Zelda Wahyuni, S.Ked;R. Perkasa Astuti;Dokter;PNS;088806485483;9.2
+3452;0058018432;Vivi Lestari;P;Makassar;2013-08-23;Islam;Jl. Urip Sumoharjo;Yusuf Suartini;Ajiman Anggriawan;Pedagang;Perawat;08527013894;7.3
+3453;0076459204;Mursita Uwais;L;Malang;2010-01-18;Islam;Komplek Griya Indah Blok A;Zulaikha Samosir;Fitria Uyainah;Lainnya;Guru;0898258591232;9.3
+3454;0074637086;Umar Anggriawan;L;Surabaya;2010-08-31;Islam;Jl. Pahlawan;Hendri Sihombing;Cahyo Permadi;Sopir;Lainnya;08825291707;8.1
+3455;0039508751;Lanjar Pradana;L;Banyuwangi;2009-09-11;Islam;Jl. Teuku Umar;Nadine Marpaung;Zizi Saefullah;Pedagang;Wiraswasta;0858694489082;9.2
+3456;0093602367;Estiono Habibi;L;Tembilahan;2011-12-29;Islam;Jl. Thamrin;Cinta Nuraini;Yosef Suryono;Nelayan;Lainnya;;7.1
+3457;0027660805;Padma Oktaviani;P;Padang;2011-10-01;Islam;Jl. Braga;Jane Mardhiyah;Hardana Nababan;Pedagang;Karyawan Swasta;0852272349461;7.3
+3458;0026650401;Hartana Situmorang;L;Surabaya;2009-06-26;Kristen;Jl. Pahlawan;Jasmin Santoso;Anita Uyainah, M.Ak;Dokter;Ibu Rumah Tangga;0855069453710;9.1
+3459;0042135642;Danang Wibisono;L;Merauke;2012-08-04;Islam;Jl. Hayam Wuruk;Vivi Megantara;Sabrina Novitasari;Dokter;Lainnya;085679945268;8.2
+3460;0034051036;Lili Rahmawati;P;Banjarmasin;2009-03-12;Islam;Jl. Antasari;drg. Cakrawala Yolanda;Cut Lintang Kurniawan;Nelayan;Ibu Rumah Tangga;08771000840;9.2
+3461;0064232135;Eli Yolanda;P;Samarinda;2013-08-25;Islam;Jl. Imam Bonjol;drg. Yuliana Nurdiyanti, S.E.;Karimah Hutapea;Wiraswasta;Bidan;08220094823;8.2
+3462;0080353349;Rendy Marbun;L;Medan;2013-11-06;Islam;Jl. Merdeka Barat;Drs. Kasiran Manullang, S.Gz;dr. Darmanto Latupono, S.Sos;Karyawan Swasta;Lainnya;0811497661357;9.1
+3463;0052380008;Cengkir Waluyo;L;Tembilahan;2013-08-11;Islam;Jl. Kartini;Faizah Mulyani;Drs. Dirja Mahendra, S.Sos;Lainnya;Pedagang;08156314122;9.3
+3464;0080818103;Karimah Pudjiastuti;P;Dumai;2011-10-26;Islam;Gang Kelinci No. 3;H. Najam Saefullah;Latika Nuraini;Petani;Ibu Rumah Tangga;0888821072387;9.2
+3465;0034702881;Hartaka Widodo;L;Solo;2013-11-25;Islam;Jl. Asia Afrika;drg. Lukita Zulaika;Michelle Halim;Petani;PNS;089956704432;8.2
+3466;0050980577;Rafid Sihombing;L;Madiun;2009-12-29;Islam;Jl. Malioboro;Prabu Uwais, S.Ked;Hj. Ilsa Firgantoro, M.Kom.;Wiraswasta;Perawat;081392013350;7.1
+3467;0043475241;Adhiarja Wijaya;L;Kendari;2013-05-23;Islam;Jl. Gejayan;Jindra Rahmawati;Endah Puspasari;PNS;Perawat;0856202816054;9.4
+3468;0079551378;Paramita Nurdiyanti;P;Pekanbaru;2012-02-08;Islam;Jl. Asia Afrika;Ira Iswahyudi;Panca Siregar;Lainnya;Lainnya;0858349498840;8.1
+3469;0072863470;Jarwi Permadi;L;Manado;2011-03-25;Islam;Jl. H. Oemar Said;Olivia Saefullah;R. Kemal Budiman, M.TI.;Buruh;Perawat;0853873297073;8.3
+3470;0063938302;Eka Melani;P;Medan;2012-05-26;Kristen;Jl. Dago Atas;Rachel Mustofa;Tira Padmasari, S.Pt;Petani;Lainnya;08584799577;8.1
+3471;0046076183;Omar Sihombing;L;Kediri;2009-03-21;Islam;Jl. Setiabudi;Damu Yuniar, S.I.Kom;Drs. Safina Andriani, S.Sos;Guru;Karyawan Swasta;081943356595;9.1
+3472;0045382187;Rahmi Lestari;P;Madiun;2011-11-15;Islam;Jl. Merdeka Barat;Jayeng Sihotang;Purwa Waskita;Petani;Karyawan Swasta;085815884949;9.1
+3473;0069221806;Karimah Suryatmi;P;Kendari;2011-01-30;Islam;Jl. Ahmad Yani No. 5;Melinda Puspita, S.Pd;Rudi Halimah;Lainnya;Perawat;0817823043111;8.3
+3474;0002286644;Oman Maryadi;L;Kediri;2013-10-09;Islam;Jl. Pattimura;Ophelia Widodo;Gina Padmasari, S.Kom;Buruh;Lainnya;08998296377;7.3
+3475;0076691814;Mutia Utami;P;Aceh;2010-04-11;Islam;Jl. Sisingamangaraja;Ulya Yuniar, S.Sos;Maida Kusmawati;Wiraswasta;Pedagang;081746619382;7.2
+3476;0001062991;Leo Nababan;L;Palembang;2010-05-25;Islam;Jl. Thamrin;Unjani Wahyuni;Rika Melani;Nelayan;PNS;0853376677073;9.2
+3477;0062034128;Taufik Kuswoyo;L;Madiun;2009-07-03;Katolik;Jl. Ahmad Yani No. 5;Winda Pangestu;Puti Anggraini;Petani;Wiraswasta;08775330319;9.4
+3478;0073362839;Ade Farida;P;Gorontalo;2010-12-19;Islam;Jl. Gatot Subroto Kav. 12;Paris Budiyanto;Yance Wahyudin;Petani;Bidan;08196985059;9.3
+3479;0040716426;Tari Sudiati;P;Denpasar;2010-05-06;Islam;Jl. Merdeka Barat;Dasa Pranowo;Nova Waskita, S.Psi;TNI/Polri;Perawat;08123807050;7.1
+3480;0083576256;Himawan Sihombing;L;Madiun;2012-06-11;Islam;Gang Kelinci No. 3;Carla Astuti;Prabawa Agustina;TNI/Polri;Wiraswasta;0815498144711;9.3
+3481;0008084089;Ika Mulyani;P;Jambi;2009-06-12;Islam;Jl. Ahmad Yani No. 5;Tgk. Hesti Wibowo;Qori Damanik;Dokter;PNS;0877835352355;9.2
+3482;0095865684;Ulva Pudjiastuti;P;Bandar Lampung;2014-01-16;Islam;Jl. Kaliurang km 5;H. Joko Maulana, S.H.;dr. Candrakanta Wibowo, M.TI.;Karyawan Swasta;Lainnya;0855100429762;9.1
+3483;0053316231;Ina Rahmawati;P;Palangkaraya;2011-02-14;Islam;Jl. Pattimura;H. Usman Januar, M.Kom.;Eva Hasanah, S.I.Kom;Pedagang;Karyawan Swasta;;9.1
+3484;0005299687;Intan Usada;P;Padang;2010-05-09;Islam;Jl. Gejayan;Titin Safitri, S.T.;Dr. Tasdik Suartini;Guru;Karyawan Swasta;0897866961414;7.1
+3485;0076844507;Najam Marpaung;L;Kupang;2010-03-28;Islam;Jl. Hayam Wuruk;Karen Nasyidah;Jabal Narpati;Petani;Ibu Rumah Tangga;088283154956;8.2
+3486;0039166387;Salman Hutapea;L;Tembilahan;2010-02-21;Islam;Jl. Kenanga No. 4;drg. Warsita Winarno, S.Pd;Ciaobella Firgantoro, M.Pd;Buruh;PNS;0855449216161;8.2
+3487;0094282246;Tantri Mandasari;P;Tarakan;2009-12-09;Islam;Jl. Setiabudi;Asman Nuraini;Padma Gunarto;Dokter;Ibu Rumah Tangga;0814258738308;8.3
+3488;0007022275;Lili Andriani;P;Manado;2014-01-16;Islam;Jl. Braga;Artanto Narpati, S.Farm;Qori Adriansyah;Buruh;Lainnya;08218005045;9.4
+3489;0072226337;Gina Wijayanti;P;Medan;2012-05-21;Budha;Jl. Imam Bonjol;Victoria Narpati;Dr. Ana Saptono;Petani;Lainnya;089669996671;9.1
+3490;0030703880;Prima Sitompul;L;Sorong;2009-11-06;Islam;Jl. Setiabudi;Drs. Restu Yuliarti;Maryanto Hartati;Dokter;Perawat;0812625884839;9.1
+3491;0040206595;Wadi Wijaya;L;Jakarta;2011-04-02;Islam;Jl. Antasari;Praba Wastuti;Tgk. Zelaya Halimah, S.E.I;Pedagang;Guru;08134450970;9.2
+3492;0002334365;Budi Mahendra;L;Bandar Lampung;2011-01-12;Islam;Jl. Jend. Sudirman No. 10;Gaiman Hartati;Hj. Padmi Palastri;Sopir;PNS;082323800130;8.2
+3493;0057511811;Zamira Lestari;P;Palembang;2010-12-17;Islam;Jl. Gatot Subroto Kav. 12;Gasti Lailasari;Lintang Zulaika, M.Pd;Karyawan Swasta;Guru;0821196779474;9.1
+3494;0004351506;Cecep Ramadan;L;Padang;2009-08-02;Islam;Jl. Ahmad Yani No. 5;Rudi Utami;Bella Aryani, S.Gz;Lainnya;Lainnya;0896348772809;9.4
+3495;0095162358;Maria Lailasari;P;Malang;2010-03-21;Islam;Jl. Gejayan;Hilda Firgantoro;Sari Uwais;Lainnya;Perawat;0813088253375;7.3
+3496;0055679075;Bagiya Sitompul;L;Gorontalo;2010-02-26;Islam;Jl. Teuku Umar;Zahra Wijaya, M.M.;Akarsana Mulyani, S.Sos;Nelayan;Guru;08215297632;8.2
+3497;0050316206;Bagus Nainggolan;L;Bandar Lampung;2013-10-12;Islam;Jl. Pattimura;Hj. Carla Purwanti;Tgk. Slamet Halimah;Buruh;PNS;0823517058727;9.1
+3498;0085261169;Siti Purwanti;P;Semarang;2009-03-27;Islam;Jl. Hayam Wuruk;Lalita Suartini;Kemba Saptono;Sopir;Karyawan Swasta;;9.3
+3499;0066969643;Ifa Mulyani;P;Bogor;2009-06-18;Islam;Jl. Pattimura;Hesti Wahyudin;Tina Usada;Guru;Wiraswasta;08123618410;7.2
+3500;0090258276;Caket Maryadi;L;Batam;2009-04-06;Islam;Jl. Malioboro;Pia Wijayanti;Titi Hutasoit;Buruh;Bidan;0852263777615;8.3
+3501;0030091956;Empluk Hakim;L;Tangerang;2009-10-08;Kristen;Jl. Setiabudi;Gabriella Nainggolan;Dr. Padmi Gunarto;TNI/Polri;Pedagang;0859225979217;8.2
+3502;0019161087;Alika Kuswandari;P;Palembang;2013-05-10;Kristen;Jl. Imam Bonjol;Sidiq Dongoran;Enteng Aryani;Buruh;Perawat;;7.3
+3503;0023675339;Ghaliyati Mayasari;P;Bogor;2011-08-11;Islam;Jl. Imam Bonjol;Hendra Ramadan;Zelaya Laksita;Petani;Perawat;08775556903;9.4
+3504;0084321097;Shania Oktaviani;P;Kendari;2012-06-28;Islam;Jl. Sisingamangaraja;Sabrina Lazuardi;T. Surya Uyainah, S.Psi;Guru;Guru;0853449369837;9.1
+3505;0092099655;Zizi Lailasari;P;Depok;2011-03-14;Budha;Komplek Griya Indah Blok A;Kani Mahendra;Galiono Uwais;Karyawan Swasta;PNS;;9.1
+3506;0042133057;Heryanto Prasasta;L;Depok;2010-10-04;Islam;Jl. Urip Sumoharjo;Sutan Cakrabirawa Putra;Ikhsan Nugroho;Sopir;Lainnya;085521262591;8.3
+3507;0054329045;Jamalia Rahmawati;P;Depok;2011-11-28;Islam;Jl. Urip Sumoharjo;Gamblang Zulaika, S.H.;Ratih Kurniawan;Pedagang;Bidan;081352189559;7.1
+3508;0058288232;Darimin Sihotang;L;Bandar Lampung;2014-01-04;Islam;Jl. Malioboro;Dr. Kayla Sudiati;Laksana Wijayanti;PNS;Guru;081442547248;8.1
+3509;0086683177;Mutia Susanti;P;Cirebon;2012-07-22;Islam;Jl. Gatot Subroto Kav. 12;Azalea Halim;Mahmud Winarsih;Dokter;Ibu Rumah Tangga;0857288855778;9.2
+3510;0008478990;Agnes Usamah;P;Medan;2012-11-29;Islam;Jl. Pahlawan;Karen Irawan;Nadine Rajata, S.Kom;Guru;Bidan;08539139541;8.1
+3511;0091019793;Cemplunk Damanik;L;Bandung;2013-04-15;Islam;Jl. Asia Afrika;R.A. Cinta Puspasari;Drs. Danu Sitorus, S.E.;Wiraswasta;Perawat;08789901015;9.4
+3512;0037796177;Belinda Sudiati;P;Banyuwangi;2010-01-02;Islam;Jl. Pattimura;Dr. Enteng Pratiwi, S.Psi;Cornelia Zulaika;Karyawan Swasta;Ibu Rumah Tangga;085797096467;9.4
+3513;0050250849;Muni Wibowo;L;Samarinda;2011-03-12;Islam;Jl. Hayam Wuruk;Rahayu Mangunsong;Hj. Dinda Usada;Nelayan;Ibu Rumah Tangga;0819529021628;8.1
+3514;0098443604;Raisa Rahmawati;P;Denpasar;2012-08-01;Islam;Jl. Veteran;Nurul Maryati;Jaeman Mandala;Sopir;PNS;087746741162;9.1
+3515;0051386983;Bagus Sirait;L;Bengkulu;2010-01-17;Islam;Jl. Sisingamangaraja;Alika Wasita;Vanya Simbolon;Pedagang;Lainnya;;8.3
+3516;0088110099;Waluyo Pratama;L;Probolinggo;2010-09-21;Islam;Jl. Cendrawasih;Zulfa Pranowo, S.Gz;Ir. Hardana Halimah, S.E.;Sopir;Wiraswasta;087822814274;9.3
+3517;0063796581;Ade Palastri;P;Kupang;2009-02-03;Islam;Jl. Braga;Prayitna Nasyiah;Eja Firmansyah;Lainnya;Ibu Rumah Tangga;0814667553349;8.3
+3518;0008345612;Jumadi Kuswoyo;L;Mataram;2013-11-25;Budha;Perumahan Suka Maju No. 12;Amalia Pratiwi;Calista Pertiwi, M.Ak;Guru;Wiraswasta;0817978183965;9.2
+3519;0038354523;Paramita Zulaika;P;Madiun;2010-03-20;Islam;Jl. Teuku Umar;Siti Latupono;Uchita Uyainah;Guru;Lainnya;081955783471;9.1
+3520;0091649107;Warsa Prasasta;L;Kupang;2010-05-18;Islam;Jl. H. Oemar Said;Raden Hutasoit;Rahayu Natsir;Karyawan Swasta;Lainnya;0819732925854;9.1
+3521;0005998120;Adikara Pranowo;L;Palembang;2011-08-16;Kristen;Jl. Urip Sumoharjo;Joko Jailani, S.E.;drg. Lidya Tarihoran;Buruh;Wiraswasta;0811911688494;7.2
+3522;0086542164;Eja Hardiansyah;L;Palu;2011-01-01;Islam;Jl. Setiabudi;KH. Rosman Maulana, M.Ak;Ophelia Najmudin, S.H.;Buruh;Perawat;08185731450;8.2
+3523;0034680101;Vinsen Uwais;L;Jambi;2012-01-08;Islam;Jl. Antasari;Manah Hariyah;Ihsan Rajasa;PNS;Perawat;081867193817;7.3
+3524;0076821032;Rahmi Aryani;P;Purwokerto;2011-12-07;Islam;Jl. Kaliurang km 5;R. Citra Pangestu, M.Pd;Anom Rahayu, M.Kom.;Nelayan;Perawat;;8.3
+3525;0086062982;Cinthia Sudiati;P;Bandung;2013-08-27;Islam;Jl. Dago Atas;Salsabila Iswahyudi, S.IP;drg. Ade Wahyudin, S.E.I;PNS;Karyawan Swasta;08112538340;8.2
+3526;0014677641;Cinthia Uyainah;P;Palangkaraya;2010-04-04;Islam;Jl. Hayam Wuruk;Irma Kusumo;Zulfa Pradana;Pedagang;Guru;0813611549146;9.1
+3527;0071727501;Lidya Permata;P;Pontianak;2013-12-14;Islam;Jl. Asia Afrika;Cakrabirawa Hutasoit;Sarah Anggriawan, M.M.;PNS;Perawat;08968181460;8.3
+3528;0076842958;Karta Pradana;L;Banjarmasin;2009-03-17;Budha;Gang Kelinci No. 3;Ir. Jasmani Wijaya, S.Pd;Latika Napitupulu;Sopir;Bidan;0859461016049;8.2
+3529;0075060666;Salsabila Pratiwi;P;Kediri;2009-10-10;Islam;Jl. Kenanga No. 4;Hj. Cinta Widodo;Dinda Rajasa;Wiraswasta;Lainnya;;9.1
+3530;0008789938;Ega Anggriawan;L;Manado;2013-12-12;Islam;Jl. Kenanga No. 4;Vicky Sihombing;KH. Mustika Thamrin;Guru;Bidan;0823319395608;9.3
+3531;0034043723;Patricia Astuti;P;Probolinggo;2009-06-17;Islam;Jl. Imam Bonjol;Wardi Safitri;Lukman Saragih;Nelayan;Guru;085320207354;8.1
+3532;0064304388;Makuta Najmudin;L;Magelang;2010-02-10;Islam;Jl. H. Oemar Said;Kunthara Nurdiyanti;Cut Zaenab Yuniar, M.Ak;Pedagang;Lainnya;081481663044;9.4
+3533;0007499822;Murti Tampubolon;L;Denpasar;2010-10-30;Islam;Jl. Kenanga No. 4;Vanesa Nuraini;Digdaya Uwais;Karyawan Swasta;Pedagang;0855055580721;9.3
+3534;0008165852;Hilda Susanti;P;Jambi;2010-06-01;Islam;Jl. H. Oemar Said;Ulva Fujiati;Drs. Eva Gunawan;Nelayan;Guru;08232898363;8.2
+3535;0067673562;Danu Permadi;L;Semarang;2010-12-11;Islam;Jl. Imam Bonjol;drg. Yunita Mustofa;Tania Namaga;Pedagang;Guru;0898164941588;7.1
+3536;0061729019;Elma Purnawati;P;Banjarmasin;2010-12-09;Islam;Jl. Gejayan;Amalia Palastri;Lega Astuti, S.T.;Petani;PNS;08221603458;8.3
+3537;0059580022;Lili Lestari;P;Yogyakarta;2013-03-23;Kristen;Jl. Gajah Mada;Drs. Aris Agustina;Okta Sihombing;Buruh;Ibu Rumah Tangga;08157755566;8.1
+3538;0090393878;Indra Salahudin;L;Pontianak;2013-01-11;Islam;Jl. Gajah Mada;dr. Jefri Waskita;Ir. Wahyu Prasetya, S.T.;Pedagang;Ibu Rumah Tangga;08212061241;8.3
+3539;0086919467;Endah Maryati;P;Tasikmalaya;2011-10-06;Islam;Jl. Veteran;Puti Ana Simbolon;Yance Mansur;Pedagang;Guru;081469732615;9.4
+3540;0050584094;Eva Usamah;P;Depok;2013-02-15;Islam;Jl. Cendrawasih;Tedi Pangestu;Najwa Marbun;Pedagang;Pedagang;085881211533;7.2
+3541;0034843294;Rina Usamah;P;Bengkulu;2009-05-19;Islam;Jl. Sisingamangaraja;Laila Anggraini;R.A. Suci Nasyidah, M.Pd;Pedagang;PNS;;8.2
+3542;0004484696;Leo Hutagalung;L;Jakarta;2013-02-05;Islam;Gang Kelinci No. 3;drg. Jaswadi Agustina, S.Ked;Fitria Situmorang, S.Pt;Wiraswasta;Lainnya;08170462104;7.2
+3543;0036166884;Usyi Riyanti;P;Palu;2010-02-25;Islam;Gang Kelinci No. 3;Wirda Tarihoran;Drs. Yessi Firmansyah;Pedagang;PNS;08538214391;8.3
